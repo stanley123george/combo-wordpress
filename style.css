@@ -1,0 +1,30 @@
+/*
+Theme Name: Combo Child
+Theme URI: https://combo-it.rs
+Description: Child theme za Hello Elementor
+Author: Combo IT
+Template: hello-elementor
+Version: 1.0.0
+*/
+
+/* =============================================
+   GLOBALNI STILOVI
+   ============================================= */
+
+:root {
+  --combo-blue: #2563EB;
+  --combo-blue-dark: #1D4ED8;
+  --combo-dark: #0F172A;
+  --combo-dark-secondary: #1E293B;
+  --combo-text: #334155;
+  --combo-text-light: #64748B;
+  --combo-border: #E2E8F0;
+  --combo-white: #FFFFFF;
+  --combo-green: #10B981;
+  --combo-font: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--combo-font);
+  color: var(--combo-text);
+}
