@@ -30,65 +30,95 @@ body {
 }
 
 /* =============================================
-   COMBO IT — GRID LAYOUTS
+   COMBO IT — GRID LAYOUTS (targetiramo Elementor ID-ove)
    ============================================= */
 
-/* Stats grid — 2 kolone */
-.combo-stats-grid {
+/* Stats grid (hero desna kolona) — 2 kolone */
+.elementor-element-s001r {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
   gap: 10px !important;
 }
-.combo-stats-grid > .e-con {
+.elementor-element-s001r > .e-con {
   width: 100% !important;
   max-width: 100% !important;
   flex: none !important;
 }
 
 /* Usluge grid — 3 kolone */
-.combo-services-grid {
+.elementor-element-s002grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 20px !important;
 }
-.combo-services-grid > .e-con {
+.elementor-element-s002grid > .e-con {
   width: 100% !important;
   max-width: 100% !important;
   flex: none !important;
 }
 
 /* Partneri grid — 3 kolone */
-.combo-partners-grid {
+.elementor-element-s004grid {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
   gap: 16px !important;
 }
-.combo-partners-grid > .e-con {
+.elementor-element-s004grid > .e-con {
   width: 100% !important;
   max-width: 100% !important;
   flex: none !important;
 }
 
 /* Testimoniali grid — 2 kolone */
-.combo-testimonials-grid {
+.elementor-element-s005grid {
   display: grid !important;
   grid-template-columns: 1fr 1fr !important;
   gap: 20px !important;
 }
-.combo-testimonials-grid > .e-con {
+.elementor-element-s005grid > .e-con {
   width: 100% !important;
   max-width: 100% !important;
   flex: none !important;
 }
 
-/* Icon-box levo poravnanje (usluge i partneri) */
-.combo-services-grid .elementor-icon-box-wrapper,
-.combo-partners-grid .elementor-icon-box-wrapper {
+/* Icon-box levo poravnanje */
+.elementor-element-s002grid .elementor-icon-box-wrapper,
+.elementor-element-s004grid .elementor-icon-box-wrapper {
   text-align: left !important;
   align-items: flex-start !important;
 }
-.combo-services-grid .elementor-icon-box-icon,
-.combo-partners-grid .elementor-icon-box-icon {
+.elementor-element-s002grid .elementor-icon-box-icon,
+.elementor-element-s004grid .elementor-icon-box-icon {
   justify-content: flex-start !important;
   margin: 0 0 14px 0 !important;
+}
+
+/* CSS klase (važe i za buduće re-importe) */
+.combo-stats-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}
+.combo-services-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+}
+.combo-partners-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 16px !important;
+}
+.combo-testimonials-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 20px !important;
+}
+.combo-stats-grid > .e-con,
+.combo-services-grid > .e-con,
+.combo-partners-grid > .e-con,
+.combo-testimonials-grid > .e-con {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: none !important;
 }
