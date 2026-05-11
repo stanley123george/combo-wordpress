@@ -5,23 +5,32 @@
   "content": [
 
     {
-      "id": "sec0001",
-      "elType": "section",
+      "id": "s001",
+      "elType": "container",
       "settings": {
-        "background_background": "classic",
-        "background_color": "#0F172A",
-        "padding": {"unit": "px", "top": "80", "right": "60", "bottom": "80", "left": "60", "isLinked": false},
         "content_width": "boxed",
-        "custom_width": {"unit": "px", "size": 1200}
+        "boxed_width": {"unit": "px", "size": 1200},
+        "flex_direction": "row",
+        "flex_align_items": "center",
+        "gap": {"unit": "px", "row": "0", "column": "60", "isLinked": false},
+        "padding": {"unit": "px", "top": "80", "right": "60", "bottom": "80", "left": "60", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#0F172A"
       },
       "elements": [
         {
-          "id": "col0001",
-          "elType": "column",
-          "settings": {"_column_size": 55, "content_position": "middle"},
+          "id": "s001l",
+          "elType": "container",
+          "settings": {
+            "flex_direction": "column",
+            "flex_align_items": "flex-start",
+            "gap": {"unit": "px", "row": "0", "column": "0", "isLinked": true},
+            "_element_width": "initial",
+            "_element_custom_width": {"unit": "%", "size": 55}
+          },
           "elements": [
             {
-              "id": "wgt0001",
+              "id": "w001",
               "elType": "widget",
               "widgetType": "html",
               "settings": {
@@ -29,7 +38,7 @@
               }
             },
             {
-              "id": "wgt0002",
+              "id": "w002",
               "elType": "widget",
               "widgetType": "heading",
               "settings": {
@@ -45,380 +54,159 @@
               }
             },
             {
-              "id": "wgt0003",
+              "id": "w003",
               "elType": "widget",
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p style=\"font-size:17px;line-height:1.75;color:#94A3B8;font-family:Inter,sans-serif\">Upravljamo Microsoft 365, Azure, mrežama i IT administracijom za mala i srednja preduzeća u Srbiji i regionu.</p>",
+                "editor": "<p>Upravljamo Microsoft 365, Azure, mre&#382;ama i IT administracijom za mala i srednja preduze&#263;a u Srbiji i regionu.</p>",
+                "text_color": "#94A3B8",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": {"unit": "px", "size": 17},
+                "typography_line_height": {"unit": "em", "size": 1.75},
                 "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "36", "left": "0", "isLinked": false}
               }
             },
             {
-              "id": "wgt0004",
-              "elType": "widget",
-              "widgetType": "html",
+              "id": "s001btns",
+              "elType": "container",
               "settings": {
-                "html": "<div style=\"display:flex;gap:12px;flex-wrap:wrap\"><a href=\"#kontakt\" style=\"display:inline-flex;align-items:center;background:#2563EB;color:#fff;padding:14px 26px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;font-family:Inter,sans-serif\">Zaka&#382;ite besplatnu konsultaciju</a><a href=\"#case-studies\" style=\"display:inline-flex;align-items:center;background:transparent;color:#fff;padding:14px 26px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;font-family:Inter,sans-serif;border:1px solid rgba(255,255,255,0.25)\">Pogledajte case studies</a></div>"
-              }
-            }
-          ]
-        },
-        {
-          "id": "col0002",
-          "elType": "column",
-          "settings": {"_column_size": 45, "content_position": "middle"},
-          "elements": [
-            {
-              "id": "wgt0005",
-              "elType": "widget",
-              "widgetType": "html",
-              "settings": {
-                "html": "<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px\"><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">55+</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">klijenata na odr&#382;avanju</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">2.000+</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">radnih stanica</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">70+</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">servera</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">1.400+</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">Microsoft licenci</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">&lt;30min</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">prose&#269;an odgovor</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">94%</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">u SLA roku</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">87%</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">first-call resolution</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">8</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">IT administratora</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px 20px\"><div style=\"font-size:26px;font-weight:700;color:#fff;font-family:Inter,sans-serif\">9+</div><div style=\"font-size:13px;color:#64748B;font-family:Inter,sans-serif;margin-top:5px\">zemalja klijenata</div></div></div>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "sec0002",
-      "elType": "section",
-      "settings": {
-        "background_background": "classic",
-        "background_color": "#FFFFFF",
-        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
-        "content_width": "boxed",
-        "custom_width": {"unit": "px", "size": 1200}
-      },
-      "elements": [
-        {
-          "id": "col0003",
-          "elType": "column",
-          "settings": {"_column_size": 100},
-          "elements": [
-            {
-              "id": "wgt0006",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "&#352;TA RADIMO",
-                "header_size": "p",
-                "title_color": "#2563EB",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 13},
-                "typography_font_weight": "700",
-                "typography_letter_spacing": {"unit": "px", "size": 1.5},
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "10", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0007",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Sve IT usluge na jednom mestu",
-                "header_size": "h2",
-                "title_color": "#0F172A",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 36},
-                "typography_font_weight": "700",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "12", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0008",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<p style=\"font-size:17px;color:#64748B;max-width:520px;line-height:1.7;font-family:Inter,sans-serif\">Od prvog laptopa do cloud infrastrukture &mdash; brinemo o celokupnom IT ekosistemu va&#353;e firme.</p>",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "50", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0009",
-              "elType": "widget",
-              "widgetType": "html",
-              "settings": {
-                "html": "<div style=\"display:grid;grid-template-columns:repeat(3,1fr);gap:20px;font-family:Inter,sans-serif\"><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:28px\"><div style=\"width:42px;height:42px;background:#EFF6FF;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 21 21\" fill=\"none\"><rect x=\"1\" y=\"1\" width=\"9\" height=\"9\" fill=\"#f25022\"/><rect x=\"11\" y=\"1\" width=\"9\" height=\"9\" fill=\"#7fba00\"/><rect x=\"1\" y=\"11\" width=\"9\" height=\"9\" fill=\"#00a4ef\"/><rect x=\"11\" y=\"11\" width=\"9\" height=\"9\" fill=\"#ffb900\"/></svg></div><h3 style=\"font-size:16px;font-weight:700;color:#0F172A;margin:0 0 10px\">IT administracija</h3><p style=\"font-size:14px;color:#64748B;line-height:1.65;margin:0 0 16px\">Windows serveri, Active Directory, korisnidke stanice, servis, perifirije.</p><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">HP</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Dell</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Lenovo</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Apple</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Windows</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">macOS</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:28px\"><div style=\"width:42px;height:42px;background:#F0FDF4;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" fill=\"none\"><circle cx=\"10\" cy=\"10\" r=\"8\" fill=\"#10B981\"/><path d=\"M6.5 10l2.5 3L14 7\" stroke=\"white\" stroke-width=\"1.8\" stroke-linecap=\"round\" fill=\"none\"/></svg></div><h3 style=\"font-size:16px;font-weight:700;color:#0F172A;margin:0 0 10px\">Cloud re&#353;enja</h3><p style=\"font-size:14px;color:#64748B;line-height:1.65;margin:0 0 16px\">Microsoft 365, Azure, Teams, OneDrive, SharePoint &mdash; migracija i podr&#353;ka.</p><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">M365</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Azure</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Teams</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">OneDrive</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Intune</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:28px\"><div style=\"width:42px;height:42px;background:#FFFBEB;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" fill=\"none\"><circle cx=\"10\" cy=\"10\" r=\"8\" stroke=\"#F59E0B\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"10\" cy=\"10\" r=\"3.5\" fill=\"#F59E0B\"/></svg></div><h3 style=\"font-size:16px;font-weight:700;color:#0F172A;margin:0 0 10px\">Mre&#382;e</h3><p style=\"font-size:14px;color:#64748B;line-height:1.65;margin:0 0 16px\">Projektovanje, instalacija i monitoring LAN/WAN mre&#382;a.</p><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">MikroTik</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Cisco</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Ubiquiti</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Aruba</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">TP-Link</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:28px\"><div style=\"width:42px;height:42px;background:#FFF7ED;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" fill=\"none\"><rect x=\"3\" y=\"5\" width=\"14\" height=\"10\" rx=\"1\" stroke=\"#F97316\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M7 5V4a1 1 0 011-1h4a1 1 0 011 1v1\" stroke=\"#F97316\" stroke-width=\"1.5\" fill=\"none\"/></svg></div><h3 style=\"font-size:16px;font-weight:700;color:#0F172A;margin:0 0 10px\">Licenciranje</h3><p style=\"font-size:14px;color:#64748B;line-height:1.65;margin:0 0 16px\">Microsoft CSP, Sophos, Adobe i ostale licence. Optimizacija resursa i u&#353;teda tro&#353;kova.</p><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Microsoft CSP</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Sophos</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Adobe</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:28px\"><div style=\"width:42px;height:42px;background:#F5F3FF;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" fill=\"none\"><path d=\"M10 3v14M3 10h14\" stroke=\"#8B5CF6\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg></div><h3 style=\"font-size:16px;font-weight:700;color:#0F172A;margin:0 0 10px\">IT consulting</h3><p style=\"font-size:14px;color:#64748B;line-height:1.65;margin:0 0 16px\">Strategija, optimizacija infrastrukture i automatizacija IT procesa.</p><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Strategija</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Automatizacija</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Optimizacija</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:28px\"><div style=\"width:42px;height:42px;background:#FFF1F2;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" fill=\"none\"><rect x=\"2\" y=\"6\" width=\"16\" height=\"10\" rx=\"1.5\" stroke=\"#F43F5E\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"16\" cy=\"11\" r=\"1\" fill=\"#F43F5E\"/></svg></div><h3 style=\"font-size:16px;font-weight:700;color:#0F172A;margin:0 0 10px\">On-premise &amp; Serveri</h3><p style=\"font-size:14px;color:#64748B;line-height:1.65;margin:0 0 16px\">Fizi&#269;ka serverska infrastruktura, storage re&#353;enja, rack i hibridna okru&#382;enja.</p><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">HP Serveri</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Dell PowerEdge</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">NAS/SAN</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">VMware</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:28px\"><div style=\"width:42px;height:42px;background:#EFF6FF;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" fill=\"none\"><rect x=\"2\" y=\"4\" width=\"16\" height=\"12\" rx=\"2\" stroke=\"#2563EB\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M6 8h8M6 12h5\" stroke=\"#2563EB\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg></div><h3 style=\"font-size:16px;font-weight:700;color:#0F172A;margin:0 0 10px\">Web izrada</h3><p style=\"font-size:14px;color:#64748B;line-height:1.65;margin:0 0 16px\">Web sajtovi i aplikacije po sistemu klju&#269; u ruke. Izrada, odr&#382;avanje i hostovanje.</p><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">WordPress</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Custom</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:4px 10px;border-radius:20px\">Hosting</span></div></div></div>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "sec0003",
-      "elType": "section",
-      "settings": {
-        "background_background": "classic",
-        "background_color": "#F8FAFC",
-        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
-        "content_width": "boxed",
-        "custom_width": {"unit": "px", "size": 1200}
-      },
-      "elements": [
-        {
-          "id": "col0004",
-          "elType": "column",
-          "settings": {"_column_size": 100},
-          "elements": [
-            {
-              "id": "wgt0010",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "RE&#352;ENJA PO VELI&#268;INI TIMA",
-                "header_size": "p",
-                "title_color": "#2563EB",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 13},
-                "typography_font_weight": "700",
-                "typography_letter_spacing": {"unit": "px", "size": 1.5},
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "10", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0011",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Prona&#273;ite re&#353;enje za va&#353;u firmu",
-                "header_size": "h2",
-                "title_color": "#0F172A",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 36},
-                "typography_font_weight": "700",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "12", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0012",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<p style=\"font-size:17px;color:#64748B;line-height:1.7;font-family:Inter,sans-serif\">Svaka firma ima druga&#269;ije IT potrebe. Kliknite na va&#353; segment i vidite &#353;ta nudimo.</p>",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "40", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0013",
-              "elType": "widget",
-              "widgetType": "tabs",
-              "settings": {
-                "tabs": [
-                  {
-                    "_id": "tab1",
-                    "tab_title": "10 zaposlenih",
-                    "tab_content": "<div style=\"background:#0F172A;border-radius:14px;padding:48px;font-family:Inter,sans-serif\"><p style=\"font-size:13px;font-weight:700;color:#2563EB;letter-spacing:1.5px;margin-bottom:12px\">ZA FIRME DO 10 ZAPOSLENIH</p><h3 style=\"font-size:32px;font-weight:700;color:#fff;margin-bottom:16px\">Malo preduze&#263;e, <span style=\"color:#2563EB\">veliki IT problemi?</span></h3><p style=\"font-size:16px;color:#94A3B8;line-height:1.7;margin-bottom:32px;max-width:500px\">Novi zaposleni &mdash; ko mu pode&#353;ava mail i laptop? Neko oti&#353;ao &mdash; ko ga&#353;i pristupe? Re&#353;avamo to jednom i zauvek.</p><a href=\"#kontakt\" style=\"display:inline-flex;background:#2563EB;color:#fff;padding:14px 24px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;margin-bottom:40px\">Zaka&#382;ite besplatan razgovor</a><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px\"><div style=\"background:#1E293B;border-radius:10px;padding:18px\"><div style=\"font-size:24px;font-weight:700;color:#fff\">30+</div><div style=\"font-size:13px;color:#64748B;margin-top:4px\">klijenata ove veli&#269;ine</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px\"><div style=\"font-size:24px;font-weight:700;color:#fff\">&lt;30min</div><div style=\"font-size:13px;color:#64748B;margin-top:4px\">prose&#269;an odgovor</div></div></div><p style=\"font-size:14px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px\">&#352;TA JE UKLJU&#268;ENO</p><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:12px\"><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Onboarding novog zaposlenog</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Mail, Teams nalog, laptop setup, pristup folderima &mdash; sve za 2 sata</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Offboarding zaposlenog</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Ga&#353;enje svih pristupa, &#269;uvanje podataka, prenos naloga &mdash; bez rizika</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Microsoft 365 setup</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Mailovi, Teams, OneDrive, deljeni kalendari za ceo tim</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Backup podataka</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Automatski backup u cloud &mdash; bez USB diskova koji se gube</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Antivirus i za&#353;tita</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Panda/Sophos za laptope i mobilne telefone &mdash; centralno upravljanje</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Deljeni folderi &mdash; bez WhatsAppa</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">SharePoint / OneDrive &mdash; svi rade na istim fajlovima</p></div></div></div>"
-                  },
-                  {
-                    "_id": "tab2",
-                    "tab_title": "50+ zaposlenih",
-                    "tab_content": "<div style=\"background:#0F172A;border-radius:14px;padding:48px;font-family:Inter,sans-serif\"><p style=\"font-size:13px;font-weight:700;color:#2563EB;letter-spacing:1.5px;margin-bottom:12px\">ZA FIRME DO 50 ZAPOSLENIH</p><h3 style=\"font-size:32px;font-weight:700;color:#fff;margin-bottom:16px\">Rastete, a IT <span style=\"color:#2563EB\">ne prati tempo?</span></h3><p style=\"font-size:16px;color:#94A3B8;line-height:1.7;margin-bottom:32px;max-width:500px\">Ko ima pristup &#269;emu? Za&#353;to je mre&#382;a spora? Ko je zadu&#382;en za IT kad niko nije? Re&#353;avamo &mdash; bez zapo&#353;ljavanja IT-evca.</p><a href=\"#kontakt\" style=\"display:inline-flex;background:#2563EB;color:#fff;padding:14px 24px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;margin-bottom:40px\">Zaka&#382;ite besplatan razgovor</a><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px\"><div style=\"background:#1E293B;border-radius:10px;padding:18px\"><div style=\"font-size:24px;font-weight:700;color:#fff\">15-20</div><div style=\"font-size:13px;color:#64748B;margin-top:4px\">klijenata ove veli&#269;ine</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px\"><div style=\"font-size:24px;font-weight:700;color:#fff\">8</div><div style=\"font-size:13px;color:#64748B;margin-top:4px\">IT admina za podr&#353;ku</div></div></div><p style=\"font-size:14px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px\">SVE IZ PAKETA DO 10, PLUS:</p><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:12px\"><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Active Directory</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Ko ima pristup &#269;emu &mdash; pod kontrolom, revizija u svakom trenutku</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">VPN i remote pristup</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Hibridni rad &mdash; kod ku&#263;e radi kao da je u kancelariji</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Server ili cloud storage</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Centralno mesto za podatke &mdash; pouzdano, brzo, bez gubitaka</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Optimizacija M365 licenci</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Pla&#263;ate samo ono &#353;to koristite &mdash; u&#353;tedite i do 30% mese&#269;no</p></div></div></div>"
-                  },
-                  {
-                    "_id": "tab3",
-                    "tab_title": "100+ zaposlenih",
-                    "tab_content": "<div style=\"background:#0F172A;border-radius:14px;padding:48px;font-family:Inter,sans-serif\"><p style=\"font-size:13px;font-weight:700;color:#2563EB;letter-spacing:1.5px;margin-bottom:12px\">ZA FIRME SA 100+ ZAPOSLENIH</p><h3 style=\"font-size:32px;font-weight:700;color:#fff;margin-bottom:16px\">Kompleksna firma, <span style=\"color:#2563EB\">potrebna IT strategija</span></h3><p style=\"font-size:16px;color:#94A3B8;line-height:1.7;margin-bottom:32px;max-width:500px\">Vi&#353;e lokacija, stotine ure&#273;aja, kriti&#269;ni sistemi. Trebate IT partner koji razume biznis &mdash; ne samo tehni&#269;ara.</p><a href=\"#kontakt\" style=\"display:inline-flex;background:#2563EB;color:#fff;padding:14px 24px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;margin-bottom:40px\">Zaka&#382;ite konsultaciju</a><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px\"><div style=\"background:#1E293B;border-radius:10px;padding:18px\"><div style=\"font-size:24px;font-weight:700;color:#fff\">3-5</div><div style=\"font-size:13px;color:#64748B;margin-top:4px\">enterprise klijenata</div></div><div style=\"background:#1E293B;border-radius:10px;padding:18px\"><div style=\"font-size:24px;font-weight:700;color:#fff\">9+</div><div style=\"font-size:13px;color:#64748B;margin-top:4px\">zemalja podr&#353;ka</div></div></div><p style=\"font-size:14px;font-weight:700;color:#94A3B8;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px\">DODATNO ZA 100+ ZAPOSLENIH:</p><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:12px\"><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Azure cloud infrastruktura</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Skalabilna cloud arhitektura &mdash; raste s vama, pla&#263;ate ono &#353;to koristite</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Intune / MDM</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Centralno upravljanje svim ure&#273;ajima &mdash; laptopi, telefoni, tableti</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">SLA ugovor i Key Account in&#382;enjer</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Dedikovan in&#382;enjer koji poznaje va&#353;u infrastrukturu</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:14px;font-weight:600;color:#fff;margin-bottom:6px\">Napredna sigurnost &mdash; Sophos EDR</p><p style=\"font-size:13px;color:#64748B;line-height:1.6;margin:0\">Endpoint detection &amp; response &mdash; za&#353;tita od ransomware i ciljanih napada</p></div></div></div>"
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "gap": {"unit": "px", "row": "12", "column": "12", "isLinked": true}
+              },
+              "elements": [
+                {
+                  "id": "w004",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Zaka&#382;ite besplatnu konsultaciju",
+                    "link": {"url": "#kontakt"},
+                    "size": "lg",
+                    "button_background_color": "#2563EB",
+                    "button_text_color": "#FFFFFF",
+                    "border_radius": {"unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true},
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_weight": "600"
                   }
-                ],
-                "type": "horizontal"
-              }
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "sec0004",
-      "elType": "section",
-      "settings": {
-        "background_background": "classic",
-        "background_color": "#FFFFFF",
-        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
-        "content_width": "boxed",
-        "custom_width": {"unit": "px", "size": 1200}
-      },
-      "elements": [
-        {
-          "id": "col0005",
-          "elType": "column",
-          "settings": {"_column_size": 100},
-          "elements": [
-            {
-              "id": "wgt0014",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Partneri i proizvo&#273;a&#269;i",
-                "header_size": "p",
-                "title_color": "#2563EB",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 13},
-                "typography_font_weight": "700",
-                "typography_letter_spacing": {"unit": "px", "size": 1.5},
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "10", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0015",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Radimo sa vode&#263;im brendovima",
-                "header_size": "h2",
-                "title_color": "#0F172A",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 36},
-                "typography_font_weight": "700",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "48", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0016",
-              "elType": "widget",
-              "widgetType": "html",
-              "settings": {
-                "html": "<div style=\"display:grid;grid-template-columns:repeat(4,1fr);gap:16px;font-family:Inter,sans-serif\"><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:24px;cursor:pointer\"><div style=\"display:flex;align-items:center;gap:10px;margin-bottom:10px\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 21 21\" fill=\"none\"><rect x=\"1\" y=\"1\" width=\"9\" height=\"9\" fill=\"#f25022\"/><rect x=\"11\" y=\"1\" width=\"9\" height=\"9\" fill=\"#7fba00\"/><rect x=\"1\" y=\"11\" width=\"9\" height=\"9\" fill=\"#00a4ef\"/><rect x=\"11\" y=\"11\" width=\"9\" height=\"9\" fill=\"#ffb900\"/></svg><span style=\"font-weight:700;color:#0F172A;font-size:15px\">Microsoft</span><span style=\"font-size:12px;background:#E6F1FB;color:#0c447c;padding:3px 8px;border-radius:20px;font-weight:600\">CSP Partner</span></div><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Microsoft 365</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Azure</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Intune</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:24px\"><div style=\"display:flex;align-items:center;gap:10px;margin-bottom:10px\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 20 20\" fill=\"none\"><path d=\"M10 2C5.6 2 2 5.6 2 10s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8z\" fill=\"#cc0000\"/><path d=\"M6 10l3 3 5-5\" stroke=\"white\" stroke-width=\"1.8\" stroke-linecap=\"round\" fill=\"none\"/></svg><span style=\"font-weight:700;color:#0F172A;font-size:15px\">Sophos</span><span style=\"font-size:12px;background:#FEE2E2;color:#7f1d1d;padding:3px 8px;border-radius:20px;font-weight:600\">Partner</span></div><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Firewall</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Intercept X</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">EDR</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:24px\"><div style=\"display:flex;align-items:center;gap:10px;margin-bottom:10px\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 20 20\" fill=\"none\"><circle cx=\"10\" cy=\"10\" r=\"8\" fill=\"#16a34a\"/><path d=\"M6.5 10l2.5 3L14 7\" stroke=\"white\" stroke-width=\"1.8\" stroke-linecap=\"round\" fill=\"none\"/></svg><span style=\"font-weight:700;color:#0F172A;font-size:15px\">Panda</span><span style=\"font-size:12px;background:#E1F5EE;color:#085041;padding:3px 8px;border-radius:20px;font-weight:600\">Partner</span></div><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">RMM</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Antivirus</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Aether</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:24px\"><div style=\"display:flex;align-items:center;gap:10px;margin-bottom:10px\"><span style=\"font-weight:700;color:#0F172A;font-size:15px\">HP &middot; Dell &middot; Lenovo</span><span style=\"font-size:12px;background:#F1EFE8;color:#555;padding:3px 8px;border-radius:20px;font-weight:600\">Reseller</span></div><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Laptopi</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Serveri</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Periferije</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:24px\"><div style=\"display:flex;align-items:center;gap:10px;margin-bottom:10px\"><span style=\"font-weight:700;color:#0F172A;font-size:15px\">MikroTik &middot; Cisco</span><span style=\"font-size:12px;background:#E6F1FB;color:#0c447c;padding:3px 8px;border-radius:20px;font-weight:600\">MTCRE</span></div><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Ruteri</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">LAN/WAN</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">VPN</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:24px\"><div style=\"display:flex;align-items:center;gap:10px;margin-bottom:10px\"><span style=\"font-weight:700;color:#0F172A;font-size:15px\">Ubiquiti &middot; Aruba</span><span style=\"font-size:12px;background:#EDE9FE;color:#4c1d95;padding:3px 8px;border-radius:20px;font-weight:600\">Partner</span></div><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">UniFi Wi-Fi</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Access pointi</span></div></div><div style=\"border:1px solid #E2E8F0;border-radius:14px;padding:24px;border-color:#CBD5E1\"><div style=\"display:flex;align-items:center;gap:10px;margin-bottom:10px\"><span style=\"font-size:20px\">&#10003;</span><span style=\"font-weight:700;color:#0F172A;font-size:15px\">ISO 27001</span><span style=\"font-size:12px;background:#F1F5F9;color:#475569;padding:3px 8px;border-radius:20px;font-weight:600\">U toku</span></div><div style=\"display:flex;flex-wrap:wrap;gap:6px\"><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">Kontrola pristupa</span><span style=\"font-size:12px;color:#475569;background:#F1F5F9;padding:3px 9px;border-radius:20px\">GDPR</span></div></div></div>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "sec0005",
-      "elType": "section",
-      "settings": {
-        "background_background": "classic",
-        "background_color": "#F8FAFC",
-        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
-        "content_width": "boxed",
-        "custom_width": {"unit": "px", "size": 1200}
-      },
-      "elements": [
-        {
-          "id": "col0006",
-          "elType": "column",
-          "settings": {"_column_size": 100},
-          "elements": [
-            {
-              "id": "wgt0017",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Rekli su o nama",
-                "header_size": "h2",
-                "title_color": "#0F172A",
-                "align": "center",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 36},
-                "typography_font_weight": "700",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "48", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0018",
-              "elType": "widget",
-              "widgetType": "html",
-              "settings": {
-                "html": "<div style=\"display:grid;grid-template-columns:repeat(2,1fr);gap:20px;font-family:Inter,sans-serif\"><div style=\"background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:32px\"><div style=\"color:#F59E0B;font-size:18px;margin-bottom:16px\">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style=\"font-size:16px;color:#334155;line-height:1.7;margin-bottom:24px;font-style:italic\">&ldquo;Combo IT tim je na&#353; IT sektor ve&#263; godinama. Kad ne&#353;to zatreba &mdash; oni su tu. Bez pardona, bez &#269;ekanja.&rdquo;</p><div style=\"display:flex;align-items:center;gap:12px\"><div style=\"width:42px;height:42px;background:#2563EB;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px\">NM</div><div><div style=\"font-size:14px;font-weight:700;color:#0F172A\">Novak Marinkovi&#263;</div><div style=\"font-size:13px;color:#64748B\">Innovation Director &middot; EyeSee</div></div></div></div><div style=\"background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:32px\"><div style=\"color:#F59E0B;font-size:18px;margin-bottom:16px\">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style=\"font-size:16px;color:#334155;line-height:1.7;margin-bottom:24px;font-style:italic\">&ldquo;Profesionalan tim koji razume &#353;ta zna&#269;i kada IT ne radi. Brzi, precizni, pouzdani &mdash; preporu&#269;ujem svima.&rdquo;</p><div style=\"display:flex;align-items:center;gap:12px\"><div style=\"width:42px;height:42px;background:#10B981;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px\">IP</div><div><div style=\"font-size:14px;font-weight:700;color:#0F172A\">Ivan Pribi&#263;evi&#263;</div><div style=\"font-size:13px;color:#64748B\">Vlasnik &middot; Simplify</div></div></div></div><div style=\"background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:32px\"><div style=\"color:#F59E0B;font-size:18px;margin-bottom:16px\">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style=\"font-size:16px;color:#334155;line-height:1.7;margin-bottom:24px;font-style:italic\">&ldquo;Migracija na Microsoft 365 je pro&#353;la bez ijednog sata zastoja. Nismo ni primetili da se ne&#353;to desilo &mdash; a to je najve&#263;i kompliment.&rdquo;</p><div style=\"display:flex;align-items:center;gap:12px\"><div style=\"width:42px;height:42px;background:#F59E0B;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px\">TV</div><div><div style=\"font-size:14px;font-weight:700;color:#0F172A\">TermoVent</div><div style=\"font-size:13px;color:#64748B\">Part of Midea Group</div></div></div></div><div style=\"background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:32px\"><div style=\"color:#F59E0B;font-size:18px;margin-bottom:16px\">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p style=\"font-size:16px;color:#334155;line-height:1.7;margin-bottom:24px;font-style:italic\">&ldquo;Kao preduzetnik, ne mogu da gubim vreme na IT probleme. Combo IT to zna i pona&#353;a se shodno tome.&rdquo;</p><div style=\"display:flex;align-items:center;gap:12px\"><div style=\"width:42px;height:42px;background:#8B5CF6;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px\">MP</div><div><div style=\"font-size:14px;font-weight:700;color:#0F172A\">Milo&#353; Perovi&#263;</div><div style=\"font-size:13px;color:#64748B\">Entrepreneur</div></div></div></div></div>"
-              }
-            }
-          ]
-        }
-      ]
-    },
-
-    {
-      "id": "sec0006",
-      "elType": "section",
-      "settings": {
-        "background_background": "classic",
-        "background_color": "#0F172A",
-        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
-        "content_width": "boxed",
-        "custom_width": {"unit": "px", "size": 1200}
-      },
-      "elements": [
-        {
-          "id": "col0007",
-          "elType": "column",
-          "settings": {"_column_size": 55, "content_position": "middle"},
-          "elements": [
-            {
-              "id": "wgt0019",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "BEZBEDNOST INFORMACIJA",
-                "header_size": "p",
-                "title_color": "#2563EB",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 13},
-                "typography_font_weight": "700",
-                "typography_letter_spacing": {"unit": "px", "size": 1.5},
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "12", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0020",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "ISO 27001 &mdash; va&#353;i podaci u sigurnim rukama",
-                "header_size": "h2",
-                "title_color": "#FFFFFF",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 32},
-                "typography_font_weight": "700",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "20", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0021",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<p style=\"font-size:16px;color:#94A3B8;line-height:1.75;font-family:Inter,sans-serif\">Combo IT je u procesu dobijanja ISO 27001 sertifikata &mdash; me&#273;unarodnog standarda za upravljanje bezbedno&#353;&#263;u informacija. Svaki podatak koji nam poverite tretiramo po strogo definisanim procedurama.</p>",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "28", "left": "0", "isLinked": false}
-              }
-            },
-            {
-              "id": "wgt0022",
-              "elType": "widget",
-              "widgetType": "html",
-              "settings": {
-                "html": "<div style=\"display:flex;flex-wrap:wrap;gap:10px;font-family:Inter,sans-serif\"><span style=\"display:inline-flex;align-items:center;gap:6px;color:#34D399;font-size:14px;font-weight:500\"><span style=\"color:#34D399\">&#10003;</span> Kontrola pristupa</span><span style=\"display:inline-flex;align-items:center;gap:6px;color:#34D399;font-size:14px;font-weight:500\"><span style=\"color:#34D399\">&#10003;</span> Incident response plan</span><span style=\"display:inline-flex;align-items:center;gap:6px;color:#34D399;font-size:14px;font-weight:500\"><span style=\"color:#34D399\">&#10003;</span> GDPR uskladenost</span><span style=\"display:inline-flex;align-items:center;gap:6px;color:#34D399;font-size:14px;font-weight:500\"><span style=\"color:#34D399\">&#10003;</span> Business continuity</span></div>"
-              }
+                },
+                {
+                  "id": "w005",
+                  "elType": "widget",
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Pogledajte case studies",
+                    "link": {"url": "#case-studies"},
+                    "size": "lg",
+                    "button_background_color": "rgba(0,0,0,0)",
+                    "button_text_color": "#FFFFFF",
+                    "button_border_color": "rgba(255,255,255,0.3)",
+                    "border_border": "solid",
+                    "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true},
+                    "border_radius": {"unit": "px", "top": "8", "right": "8", "bottom": "8", "left": "8", "isLinked": true},
+                    "typography_typography": "custom",
+                    "typography_font_family": "Inter",
+                    "typography_font_weight": "600"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "id": "col0008",
-          "elType": "column",
-          "settings": {"_column_size": 45, "content_position": "middle"},
+          "id": "s001r",
+          "elType": "container",
+          "settings": {
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "flex_align_items": "stretch",
+            "gap": {"unit": "px", "row": "10", "column": "10", "isLinked": true},
+            "_element_width": "initial",
+            "_element_custom_width": {"unit": "%", "size": 45}
+          },
           "elements": [
             {
-              "id": "wgt0023",
-              "elType": "widget",
-              "widgetType": "html",
-              "settings": {
-                "html": "<div style=\"background:#1E293B;border-radius:16px;padding:48px;text-align:center;font-family:Inter,sans-serif\"><div style=\"width:72px;height:72px;background:#2563EB;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px\"><svg width=\"36\" height=\"36\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z\" stroke=\"white\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg></div><p style=\"font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#64748B;margin-bottom:8px\">ISO/IEC 27001</p><p style=\"font-size:20px;font-weight:700;color:#fff;margin-bottom:6px\">INFORMATION SECURITY<br>MANAGEMENT</p><div style=\"display:inline-block;background:rgba(37,99,235,0.2);color:#60A5FA;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;border:1px solid rgba(37,99,235,0.4)\">Sertifikacija u toku</div></div>"
-              }
+              "id": "st01",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st01h", "elType": "widget", "widgetType": "heading", "settings": { "title": "55+", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st01t", "elType": "widget", "widgetType": "heading", "settings": { "title": "klijenata na odr&#382;avanju", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
+            },
+            {
+              "id": "st02",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st02h", "elType": "widget", "widgetType": "heading", "settings": { "title": "2.000+", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st02t", "elType": "widget", "widgetType": "heading", "settings": { "title": "radnih stanica", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
+            },
+            {
+              "id": "st03",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st03h", "elType": "widget", "widgetType": "heading", "settings": { "title": "70+", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st03t", "elType": "widget", "widgetType": "heading", "settings": { "title": "servera", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
+            },
+            {
+              "id": "st04",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st04h", "elType": "widget", "widgetType": "heading", "settings": { "title": "1.400+", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st04t", "elType": "widget", "widgetType": "heading", "settings": { "title": "Microsoft licenci", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
+            },
+            {
+              "id": "st05",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st05h", "elType": "widget", "widgetType": "heading", "settings": { "title": "&lt;30min", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st05t", "elType": "widget", "widgetType": "heading", "settings": { "title": "prose&#269;an odgovor", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
+            },
+            {
+              "id": "st06",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st06h", "elType": "widget", "widgetType": "heading", "settings": { "title": "94%", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st06t", "elType": "widget", "widgetType": "heading", "settings": { "title": "u SLA roku", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
+            },
+            {
+              "id": "st07",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st07h", "elType": "widget", "widgetType": "heading", "settings": { "title": "87%", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st07t", "elType": "widget", "widgetType": "heading", "settings": { "title": "first-call resolution", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
+            },
+            {
+              "id": "st08",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st08h", "elType": "widget", "widgetType": "heading", "settings": { "title": "8", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st08t", "elType": "widget", "widgetType": "heading", "settings": { "title": "IT administratora", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
+            },
+            {
+              "id": "st09",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "padding": {"unit": "px", "top": "16", "right": "18", "bottom": "16", "left": "18", "isLinked": false} },
+              "elements": [
+                { "id": "st09h", "elType": "widget", "widgetType": "heading", "settings": { "title": "9+", "header_size": "h3", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 26}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "4", "left": "0", "isLinked": false} } },
+                { "id": "st09t", "elType": "widget", "widgetType": "heading", "settings": { "title": "zemalja klijenata", "header_size": "p", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13} } }
+              ]
             }
           ]
         }
@@ -426,59 +214,311 @@
     },
 
     {
-      "id": "sec0007",
-      "elType": "section",
+      "id": "s002",
+      "elType": "container",
       "settings": {
-        "background_background": "classic",
-        "background_color": "#2563EB",
-        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
         "content_width": "boxed",
-        "custom_width": {"unit": "px", "size": 1200}
+        "boxed_width": {"unit": "px", "size": 1200},
+        "flex_direction": "column",
+        "gap": {"unit": "px", "row": "0", "column": "0", "isLinked": true},
+        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#FFFFFF"
       },
       "elements": [
         {
-          "id": "col0009",
-          "elType": "column",
-          "settings": {"_column_size": 65, "content_position": "middle"},
+          "id": "w006",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": { "title": "&#352;TA RADIMO", "header_size": "p", "title_color": "#2563EB", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13}, "typography_font_weight": "700", "typography_letter_spacing": {"unit": "px", "size": 1.5}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "8", "left": "0", "isLinked": false} }
+        },
+        {
+          "id": "w007",
+          "elType": "widget",
+          "widgetType": "heading",
+          "settings": { "title": "Sve IT usluge na jednom mestu", "header_size": "h2", "title_color": "#0F172A", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 36}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "12", "left": "0", "isLinked": false} }
+        },
+        {
+          "id": "w008",
+          "elType": "widget",
+          "widgetType": "text-editor",
+          "settings": { "editor": "<p>Od prvog laptopa do cloud infrastrukture &mdash; brinemo o celokupnom IT ekosistemu va&#353;e firme.</p>", "text_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 17}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "50", "left": "0", "isLinked": false} }
+        },
+        {
+          "id": "s002grid",
+          "elType": "container",
+          "settings": {
+            "flex_direction": "row",
+            "flex_wrap": "wrap",
+            "flex_align_items": "stretch",
+            "gap": {"unit": "px", "row": "20", "column": "20", "isLinked": true}
+          },
           "elements": [
             {
-              "id": "wgt0024",
-              "elType": "widget",
-              "widgetType": "heading",
-              "settings": {
-                "title": "Zaka&#382;ite 30 minuta &mdash; besplatno.",
-                "header_size": "h2",
-                "title_color": "#FFFFFF",
-                "typography_typography": "custom",
-                "typography_font_family": "Inter",
-                "typography_font_size": {"unit": "px", "size": 36},
-                "typography_font_weight": "700",
-                "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false}
-              }
+              "id": "c001",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 31}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true} },
+              "elements": [
+                { "id": "ib01", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-th", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 20}, "icon_color": "#2563EB", "icon_padding": {"unit": "em", "top": "0.55", "right": "0.55", "bottom": "0.55", "left": "0.55", "isLinked": true}, "icon_background_color": "#EFF6FF", "icon_border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "title_text": "IT administracija", "description_text": "Windows serveri, Active Directory, korisnidke stanice, servis, perifirije.<br><small style=\"color:#94A3B8\">HP &middot; Dell &middot; Lenovo &middot; Apple &middot; Windows &middot; macOS</small>", "position": "top", "title_size": "h3", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 16}, "title_typography_font_weight": "700" } }
+              ]
             },
             {
-              "id": "wgt0025",
-              "elType": "widget",
-              "widgetType": "text-editor",
-              "settings": {
-                "editor": "<p style=\"font-size:18px;color:rgba(255,255,255,0.8);line-height:1.7;font-family:Inter,sans-serif\">Razgovor ne ko&#353;ta ni&#353;ta. Lo&#353;a IT infrastruktura &mdash; ko&#353;ta mnogo. Procenimo zajedno gde ste i &#353;ta treba da se uradi.</p>"
-              }
+              "id": "c002",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 31}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true} },
+              "elements": [
+                { "id": "ib02", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-cloud", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 20}, "icon_color": "#10B981", "icon_padding": {"unit": "em", "top": "0.55", "right": "0.55", "bottom": "0.55", "left": "0.55", "isLinked": true}, "icon_background_color": "#F0FDF4", "icon_border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "title_text": "Cloud re&#353;enja", "description_text": "Microsoft 365, Azure, Teams, OneDrive, SharePoint &mdash; migracija i podr&#353;ka.<br><small style=\"color:#94A3B8\">M365 &middot; Azure &middot; Teams &middot; OneDrive &middot; Intune</small>", "position": "top", "title_size": "h3", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 16}, "title_typography_font_weight": "700" } }
+              ]
+            },
+            {
+              "id": "c003",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 31}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true} },
+              "elements": [
+                { "id": "ib03", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-network-wired", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 20}, "icon_color": "#F59E0B", "icon_padding": {"unit": "em", "top": "0.55", "right": "0.55", "bottom": "0.55", "left": "0.55", "isLinked": true}, "icon_background_color": "#FFFBEB", "icon_border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "title_text": "Mre&#382;e", "description_text": "Projektovanje, instalacija i monitoring LAN/WAN mre&#382;a.<br><small style=\"color:#94A3B8\">MikroTik &middot; Cisco &middot; Ubiquiti &middot; Aruba &middot; TP-Link</small>", "position": "top", "title_size": "h3", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 16}, "title_typography_font_weight": "700" } }
+              ]
+            },
+            {
+              "id": "c004",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 31}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true} },
+              "elements": [
+                { "id": "ib04", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-briefcase", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 20}, "icon_color": "#F97316", "icon_padding": {"unit": "em", "top": "0.55", "right": "0.55", "bottom": "0.55", "left": "0.55", "isLinked": true}, "icon_background_color": "#FFF7ED", "icon_border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "title_text": "Licenciranje", "description_text": "Microsoft CSP, Sophos, Adobe i ostale licence. Optimizacija resursa i u&#353;teda tro&#353;kova.<br><small style=\"color:#94A3B8\">Microsoft CSP &middot; Sophos &middot; Adobe</small>", "position": "top", "title_size": "h3", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 16}, "title_typography_font_weight": "700" } }
+              ]
+            },
+            {
+              "id": "c005",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 31}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true} },
+              "elements": [
+                { "id": "ib05", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-chart-line", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 20}, "icon_color": "#8B5CF6", "icon_padding": {"unit": "em", "top": "0.55", "right": "0.55", "bottom": "0.55", "left": "0.55", "isLinked": true}, "icon_background_color": "#F5F3FF", "icon_border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "title_text": "IT consulting", "description_text": "Strategija, optimizacija infrastrukture i automatizacija IT procesa.<br><small style=\"color:#94A3B8\">Strategija &middot; Automatizacija &middot; Optimizacija</small>", "position": "top", "title_size": "h3", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 16}, "title_typography_font_weight": "700" } }
+              ]
+            },
+            {
+              "id": "c006",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 31}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true} },
+              "elements": [
+                { "id": "ib06", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-server", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 20}, "icon_color": "#F43F5E", "icon_padding": {"unit": "em", "top": "0.55", "right": "0.55", "bottom": "0.55", "left": "0.55", "isLinked": true}, "icon_background_color": "#FFF1F2", "icon_border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "title_text": "On-premise &amp; Serveri", "description_text": "Fizi&#269;ka serverska infrastruktura, storage re&#353;enja, rack i hibridna okru&#382;enja.<br><small style=\"color:#94A3B8\">HP Serveri &middot; Dell PowerEdge &middot; NAS/SAN &middot; VMware</small>", "position": "top", "title_size": "h3", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 16}, "title_typography_font_weight": "700" } }
+              ]
+            },
+            {
+              "id": "c007",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 31}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "28", "right": "28", "bottom": "28", "left": "28", "isLinked": true} },
+              "elements": [
+                { "id": "ib07", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-code", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 20}, "icon_color": "#2563EB", "icon_padding": {"unit": "em", "top": "0.55", "right": "0.55", "bottom": "0.55", "left": "0.55", "isLinked": true}, "icon_background_color": "#EFF6FF", "icon_border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "title_text": "Web izrada", "description_text": "Web sajtovi i aplikacije po sistemu klju&#269; u ruke. Izrada, odr&#382;avanje i hostovanje.<br><small style=\"color:#94A3B8\">WordPress &middot; Custom &middot; Hosting</small>", "position": "top", "title_size": "h3", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 16}, "title_typography_font_weight": "700" } }
+              ]
             }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "s003",
+      "elType": "container",
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {"unit": "px", "size": 1200},
+        "flex_direction": "column",
+        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#F8FAFC"
+      },
+      "elements": [
+        { "id": "w009", "elType": "widget", "widgetType": "heading", "settings": { "title": "RE&#352;ENJA PO VELI&#268;INI TIMA", "header_size": "p", "title_color": "#2563EB", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13}, "typography_font_weight": "700", "typography_letter_spacing": {"unit": "px", "size": 1.5}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "8", "left": "0", "isLinked": false} } },
+        { "id": "w010", "elType": "widget", "widgetType": "heading", "settings": { "title": "Prona&#273;ite re&#353;enje za va&#353;u firmu", "header_size": "h2", "title_color": "#0F172A", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 36}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "12", "left": "0", "isLinked": false} } },
+        { "id": "w011", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p>Svaka firma ima druga&#269;ije IT potrebe. Kliknite na va&#353; segment i vidite &#353;ta nudimo.</p>", "text_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 17}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "40", "left": "0", "isLinked": false} } },
+        {
+          "id": "w012",
+          "elType": "widget",
+          "widgetType": "tabs",
+          "settings": {
+            "tabs": [
+              {
+                "_id": "tab1",
+                "tab_title": "10 zaposlenih",
+                "tab_content": "<div style=\"background:#0F172A;border-radius:14px;padding:40px;font-family:Inter,sans-serif\"><p style=\"font-size:13px;font-weight:700;color:#2563EB;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px\">Za firme do 10 zaposlenih</p><h3 style=\"font-size:30px;font-weight:700;color:#fff;margin-bottom:16px\">Malo preduze&#263;e, <span style=\"color:#2563EB\">veliki IT problemi?</span></h3><p style=\"font-size:16px;color:#94A3B8;line-height:1.7;margin-bottom:28px\">Novi zaposleni &mdash; ko mu pode&#353;ava mail i laptop? Neko oti&#353;ao &mdash; ko ga&#353;i pristupe? Re&#353;avamo to jednom i zauvek.</p><a href=\"#kontakt\" style=\"display:inline-flex;background:#2563EB;color:#fff;padding:13px 22px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;margin-bottom:32px\">Zaka&#382;ite besplatan razgovor</a><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px\"><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:22px;font-weight:700;color:#fff;margin:0 0 4px\">30+</p><p style=\"font-size:13px;color:#64748B;margin:0\">klijenata ove veli&#269;ine</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:22px;font-weight:700;color:#fff;margin:0 0 4px\">&lt;30min</p><p style=\"font-size:13px;color:#64748B;margin:0\">prose&#269;an odgovor</p></div></div></div>"
+              },
+              {
+                "_id": "tab2",
+                "tab_title": "50+ zaposlenih",
+                "tab_content": "<div style=\"background:#0F172A;border-radius:14px;padding:40px;font-family:Inter,sans-serif\"><p style=\"font-size:13px;font-weight:700;color:#2563EB;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px\">Za firme do 50 zaposlenih</p><h3 style=\"font-size:30px;font-weight:700;color:#fff;margin-bottom:16px\">Rastete, a IT <span style=\"color:#2563EB\">ne prati tempo?</span></h3><p style=\"font-size:16px;color:#94A3B8;line-height:1.7;margin-bottom:28px\">Ko ima pristup &#269;emu? Za&#353;to je mre&#382;a spora? Ko je zadu&#382;en za IT kad niko nije? Re&#353;avamo &mdash; bez zapo&#353;ljavanja IT-evca.</p><a href=\"#kontakt\" style=\"display:inline-flex;background:#2563EB;color:#fff;padding:13px 22px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;margin-bottom:32px\">Zaka&#382;ite besplatan razgovor</a><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px\"><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:22px;font-weight:700;color:#fff;margin:0 0 4px\">15&ndash;20</p><p style=\"font-size:13px;color:#64748B;margin:0\">klijenata ove veli&#269;ine</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:22px;font-weight:700;color:#fff;margin:0 0 4px\">8</p><p style=\"font-size:13px;color:#64748B;margin:0\">IT admina za podr&#353;ku</p></div></div></div>"
+              },
+              {
+                "_id": "tab3",
+                "tab_title": "100+ zaposlenih",
+                "tab_content": "<div style=\"background:#0F172A;border-radius:14px;padding:40px;font-family:Inter,sans-serif\"><p style=\"font-size:13px;font-weight:700;color:#2563EB;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px\">Za firme sa 100+ zaposlenih</p><h3 style=\"font-size:30px;font-weight:700;color:#fff;margin-bottom:16px\">Kompleksna firma, <span style=\"color:#2563EB\">potrebna IT strategija</span></h3><p style=\"font-size:16px;color:#94A3B8;line-height:1.7;margin-bottom:28px\">Vi&#353;e lokacija, stotine ure&#273;aja, kriti&#269;ni sistemi. Trebate IT partner koji razume biznis &mdash; ne samo tehni&#269;ara.</p><a href=\"#kontakt\" style=\"display:inline-flex;background:#2563EB;color:#fff;padding:13px 22px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;margin-bottom:32px\">Zaka&#382;ite konsultaciju</a><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:10px\"><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:22px;font-weight:700;color:#fff;margin:0 0 4px\">3&ndash;5</p><p style=\"font-size:13px;color:#64748B;margin:0\">enterprise klijenata</p></div><div style=\"background:#1E293B;border-radius:10px;padding:16px\"><p style=\"font-size:22px;font-weight:700;color:#fff;margin:0 0 4px\">9+</p><p style=\"font-size:13px;color:#64748B;margin:0\">zemalja podr&#353;ka</p></div></div></div>"
+              }
+            ],
+            "type": "horizontal"
+          }
+        }
+      ]
+    },
+
+    {
+      "id": "s004",
+      "elType": "container",
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {"unit": "px", "size": 1200},
+        "flex_direction": "column",
+        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#FFFFFF"
+      },
+      "elements": [
+        { "id": "w013", "elType": "widget", "widgetType": "heading", "settings": { "title": "PARTNERI I PROIZVO&#272;A&#268;I", "header_size": "p", "title_color": "#2563EB", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13}, "typography_font_weight": "700", "typography_letter_spacing": {"unit": "px", "size": 1.5}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "8", "left": "0", "isLinked": false} } },
+        { "id": "w014", "elType": "widget", "widgetType": "heading", "settings": { "title": "Radimo sa vode&#263;im brendovima", "header_size": "h2", "title_color": "#0F172A", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 36}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "48", "left": "0", "isLinked": false} } },
+        {
+          "id": "s004grid",
+          "elType": "container",
+          "settings": { "flex_direction": "row", "flex_wrap": "wrap", "flex_align_items": "stretch", "gap": {"unit": "px", "row": "16", "column": "16", "isLinked": true} },
+          "elements": [
+            { "id": "p001", "elType": "container", "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 22}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true} }, "elements": [ { "id": "pb01", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fab fa-microsoft", "library": "fa-brands"}, "icon_size": {"unit": "px", "size": 22}, "icon_color": "#0078d4", "title_text": "Microsoft", "description_text": "Microsoft 365 &middot; Exchange &middot; SharePoint &middot; Azure &middot; Intune / MDM", "position": "top", "title_size": "h4", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 15}, "title_typography_font_weight": "700" } } ] },
+            { "id": "p002", "elType": "container", "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 22}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true} }, "elements": [ { "id": "pb02", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-shield-alt", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 22}, "icon_color": "#cc0000", "title_text": "Sophos", "description_text": "Sophos Firewall &middot; Intercept X EDR &middot; Sophos AV &middot; Sophos Central", "position": "top", "title_size": "h4", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 15}, "title_typography_font_weight": "700" } } ] },
+            { "id": "p003", "elType": "container", "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 22}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true} }, "elements": [ { "id": "pb03", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-check-circle", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 22}, "icon_color": "#16a34a", "title_text": "Panda Security", "description_text": "Panda RMM &middot; Panda Antivirus &middot; Aether Platform", "position": "top", "title_size": "h4", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 15}, "title_typography_font_weight": "700" } } ] },
+            { "id": "p004", "elType": "container", "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 22}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true} }, "elements": [ { "id": "pb04", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-laptop", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 22}, "icon_color": "#334155", "title_text": "HP &middot; Dell &middot; Lenovo", "description_text": "Laptopi &middot; Desktop &middot; HP/Dell Serveri &middot; Periferije", "position": "top", "title_size": "h4", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 15}, "title_typography_font_weight": "700" } } ] },
+            { "id": "p005", "elType": "container", "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 22}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true} }, "elements": [ { "id": "pb05", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-sitemap", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 22}, "icon_color": "#1d4ed8", "title_text": "MikroTik &middot; Cisco", "description_text": "Ruteri &middot; LAN/WAN &middot; VPN &middot; MTCRE Certified", "position": "top", "title_size": "h4", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 15}, "title_typography_font_weight": "700" } } ] },
+            { "id": "p006", "elType": "container", "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 22}, "flex_direction": "column", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "24", "right": "24", "bottom": "24", "left": "24", "isLinked": true} }, "elements": [ { "id": "pb06", "elType": "widget", "widgetType": "icon-box", "settings": { "icon": {"value": "fas fa-wifi", "library": "fa-solid"}, "icon_size": {"unit": "px", "size": 22}, "icon_color": "#6d28d9", "title_text": "Ubiquiti &middot; Aruba", "description_text": "UniFi Wi-Fi &middot; Access pointi &middot; Aruba switching", "position": "top", "title_size": "h4", "title_color": "#0F172A", "description_color": "#64748B", "title_typography_typography": "custom", "title_typography_font_family": "Inter", "title_typography_font_size": {"unit": "px", "size": 15}, "title_typography_font_weight": "700" } } ] }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "s005",
+      "elType": "container",
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {"unit": "px", "size": 1200},
+        "flex_direction": "column",
+        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#F8FAFC"
+      },
+      "elements": [
+        { "id": "w015", "elType": "widget", "widgetType": "heading", "settings": { "title": "Rekli su o nama", "header_size": "h2", "align": "center", "title_color": "#0F172A", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 36}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "48", "left": "0", "isLinked": false} } },
+        {
+          "id": "s005grid",
+          "elType": "container",
+          "settings": { "flex_direction": "row", "flex_wrap": "wrap", "gap": {"unit": "px", "row": "20", "column": "20", "isLinked": true} },
+          "elements": [
+            {
+              "id": "t001",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#FFFFFF", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true} },
+              "elements": [
+                { "id": "ts01r", "elType": "widget", "widgetType": "heading", "settings": { "title": "&#9733;&#9733;&#9733;&#9733;&#9733;", "header_size": "p", "title_color": "#F59E0B", "typography_font_size": {"unit": "px", "size": 18}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false} } },
+                { "id": "ts01q", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p style=\"font-style:italic\">&ldquo;Combo IT tim je na&#353; IT sektor ve&#263; godinama. Kad ne&#353;to zatreba &mdash; oni su tu. Bez pardona, bez &#269;ekanja.&rdquo;</p>", "text_color": "#334155", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 16}, "typography_line_height": {"unit": "em", "size": 1.7}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false} } },
+                { "id": "ts01a", "elType": "widget", "widgetType": "heading", "settings": { "title": "Novak Marinkovi&#263; &mdash; <span style=\"font-weight:400;color:#64748B\">Innovation Director &middot; EyeSee</span>", "header_size": "p", "title_color": "#0F172A", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 14}, "typography_font_weight": "700" } }
+              ]
+            },
+            {
+              "id": "t002",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#FFFFFF", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true} },
+              "elements": [
+                { "id": "ts02r", "elType": "widget", "widgetType": "heading", "settings": { "title": "&#9733;&#9733;&#9733;&#9733;&#9733;", "header_size": "p", "title_color": "#F59E0B", "typography_font_size": {"unit": "px", "size": 18}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false} } },
+                { "id": "ts02q", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p style=\"font-style:italic\">&ldquo;Profesionalan tim koji razume &#353;ta zna&#269;i kada IT ne radi. Brzi, precizni, pouzdani &mdash; preporu&#269;ujem svima.&rdquo;</p>", "text_color": "#334155", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 16}, "typography_line_height": {"unit": "em", "size": 1.7}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false} } },
+                { "id": "ts02a", "elType": "widget", "widgetType": "heading", "settings": { "title": "Ivan Pribi&#263;evi&#263; &mdash; <span style=\"font-weight:400;color:#64748B\">Vlasnik &middot; Simplify</span>", "header_size": "p", "title_color": "#0F172A", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 14}, "typography_font_weight": "700" } }
+              ]
+            },
+            {
+              "id": "t003",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#FFFFFF", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true} },
+              "elements": [
+                { "id": "ts03r", "elType": "widget", "widgetType": "heading", "settings": { "title": "&#9733;&#9733;&#9733;&#9733;&#9733;", "header_size": "p", "title_color": "#F59E0B", "typography_font_size": {"unit": "px", "size": 18}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false} } },
+                { "id": "ts03q", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p style=\"font-style:italic\">&ldquo;Migracija na Microsoft 365 je pro&#353;la bez ijednog sata zastoja. Nismo ni primetili da se ne&#353;to desilo &mdash; a to je najve&#263;i kompliment.&rdquo;</p>", "text_color": "#334155", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 16}, "typography_line_height": {"unit": "em", "size": 1.7}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false} } },
+                { "id": "ts03a", "elType": "widget", "widgetType": "heading", "settings": { "title": "TermoVent &mdash; <span style=\"font-weight:400;color:#64748B\">Part of Midea Group</span>", "header_size": "p", "title_color": "#0F172A", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 14}, "typography_font_weight": "700" } }
+              ]
+            },
+            {
+              "id": "t004",
+              "elType": "container",
+              "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 48}, "flex_direction": "column", "background_background": "classic", "background_color": "#FFFFFF", "border_border": "solid", "border_width": {"unit": "px", "top": "1", "right": "1", "bottom": "1", "left": "1", "isLinked": true}, "border_color": "#E2E8F0", "border_radius": {"unit": "px", "top": "14", "right": "14", "bottom": "14", "left": "14", "isLinked": true}, "padding": {"unit": "px", "top": "32", "right": "32", "bottom": "32", "left": "32", "isLinked": true} },
+              "elements": [
+                { "id": "ts04r", "elType": "widget", "widgetType": "heading", "settings": { "title": "&#9733;&#9733;&#9733;&#9733;&#9733;", "header_size": "p", "title_color": "#F59E0B", "typography_font_size": {"unit": "px", "size": 18}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false} } },
+                { "id": "ts04q", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p style=\"font-style:italic\">&ldquo;Kao preduzetnik, ne mogu da gubim vreme na IT probleme. Combo IT to zna i pona&#353;a se shodno tome.&rdquo;</p>", "text_color": "#334155", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 16}, "typography_line_height": {"unit": "em", "size": 1.7}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "24", "left": "0", "isLinked": false} } },
+                { "id": "ts04a", "elType": "widget", "widgetType": "heading", "settings": { "title": "Milo&#353; Perovi&#263; &mdash; <span style=\"font-weight:400;color:#64748B\">Entrepreneur</span>", "header_size": "p", "title_color": "#0F172A", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 14}, "typography_font_weight": "700" } }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "s006",
+      "elType": "container",
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {"unit": "px", "size": 1200},
+        "flex_direction": "row",
+        "flex_align_items": "center",
+        "gap": {"unit": "px", "row": "0", "column": "60", "isLinked": false},
+        "padding": {"unit": "px", "top": "90", "right": "60", "bottom": "90", "left": "60", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#0F172A"
+      },
+      "elements": [
+        {
+          "id": "s006l",
+          "elType": "container",
+          "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 55}, "flex_direction": "column" },
+          "elements": [
+            { "id": "w016", "elType": "widget", "widgetType": "heading", "settings": { "title": "BEZBEDNOST INFORMACIJA", "header_size": "p", "title_color": "#2563EB", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13}, "typography_font_weight": "700", "typography_letter_spacing": {"unit": "px", "size": 1.5}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "12", "left": "0", "isLinked": false} } },
+            { "id": "w017", "elType": "widget", "widgetType": "heading", "settings": { "title": "ISO 27001 &mdash; va&#353;i podaci u sigurnim rukama", "header_size": "h2", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 32}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "20", "left": "0", "isLinked": false} } },
+            { "id": "w018", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p>Combo IT je u procesu dobijanja ISO 27001 sertifikata &mdash; me&#273;unarodnog standarda za upravljanje bezbedno&#353;&#263;u informacija. Svaki podatak koji nam poverite tretiramo po strogo definisanim procedurama.</p>", "text_color": "#94A3B8", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 16}, "typography_line_height": {"unit": "em", "size": 1.75}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "28", "left": "0", "isLinked": false} } },
+            { "id": "w019", "elType": "widget", "widgetType": "icon-list", "settings": { "icon_list": [ {"_id": "il1", "text": "Kontrola pristupa", "icon": {"value": "fas fa-check", "library": "fa-solid"}}, {"_id": "il2", "text": "Incident response plan", "icon": {"value": "fas fa-check", "library": "fa-solid"}}, {"_id": "il3", "text": "GDPR uskladenost", "icon": {"value": "fas fa-check", "library": "fa-solid"}}, {"_id": "il4", "text": "Business continuity", "icon": {"value": "fas fa-check", "library": "fa-solid"}} ], "icon_color": "#34D399", "text_color": "#34D399", "space_between": {"unit": "px", "size": 10}, "icon_size": {"unit": "px", "size": 14} } }
           ]
         },
         {
-          "id": "col0010",
-          "elType": "column",
-          "settings": {"_column_size": 35, "content_position": "middle"},
+          "id": "s006r",
+          "elType": "container",
+          "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 40}, "flex_direction": "column", "flex_align_items": "center", "flex_justify_content": "center", "background_background": "classic", "background_color": "#1E293B", "border_radius": {"unit": "px", "top": "16", "right": "16", "bottom": "16", "left": "16", "isLinked": true}, "padding": {"unit": "px", "top": "48", "right": "48", "bottom": "48", "left": "48", "isLinked": true} },
           "elements": [
-            {
-              "id": "wgt0026",
-              "elType": "widget",
-              "widgetType": "html",
-              "settings": {
-                "html": "<div style=\"text-align:right;font-family:Inter,sans-serif\"><a href=\"#kontakt\" style=\"display:inline-flex;align-items:center;background:#fff;color:#2563EB;padding:16px 32px;border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;margin-bottom:12px\">Zaka&#382;ite poziv</a><br><a href=\"mailto:office@combo.rs\" style=\"color:rgba(255,255,255,0.8);font-size:14px;text-decoration:none\">office@combo.rs</a></div>"
-              }
-            }
+            { "id": "w020", "elType": "widget", "widgetType": "heading", "settings": { "title": "ISO/IEC 27001", "header_size": "p", "align": "center", "title_color": "#64748B", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 12}, "typography_font_weight": "700", "typography_letter_spacing": {"unit": "px", "size": 2}, "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "10", "left": "0", "isLinked": false} } },
+            { "id": "w021", "elType": "widget", "widgetType": "heading", "settings": { "title": "INFORMATION SECURITY<br>MANAGEMENT", "header_size": "h3", "align": "center", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 18}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "20", "left": "0", "isLinked": false} } },
+            { "id": "w022", "elType": "widget", "widgetType": "heading", "settings": { "title": "Sertifikacija u toku", "header_size": "p", "align": "center", "title_color": "#60A5FA", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 13}, "typography_font_weight": "600" } }
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "s007",
+      "elType": "container",
+      "settings": {
+        "content_width": "boxed",
+        "boxed_width": {"unit": "px", "size": 1200},
+        "flex_direction": "row",
+        "flex_align_items": "center",
+        "gap": {"unit": "px", "row": "0", "column": "60", "isLinked": false},
+        "padding": {"unit": "px", "top": "80", "right": "60", "bottom": "80", "left": "60", "isLinked": false},
+        "background_background": "classic",
+        "background_color": "#2563EB"
+      },
+      "elements": [
+        {
+          "id": "s007l",
+          "elType": "container",
+          "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 62}, "flex_direction": "column" },
+          "elements": [
+            { "id": "w023", "elType": "widget", "widgetType": "heading", "settings": { "title": "Zaka&#382;ite 30 minuta &mdash; besplatno.", "header_size": "h2", "title_color": "#FFFFFF", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 36}, "typography_font_weight": "700", "_margin": {"unit": "px", "top": "0", "right": "0", "bottom": "16", "left": "0", "isLinked": false} } },
+            { "id": "w024", "elType": "widget", "widgetType": "text-editor", "settings": { "editor": "<p>Razgovor ne ko&#353;ta ni&#353;ta. Lo&#353;a IT infrastruktura &mdash; ko&#353;ta mnogo. Procenimo zajedno gde ste i &#353;ta treba da se uradi.</p>", "text_color": "rgba(255,255,255,0.8)", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 18}, "typography_line_height": {"unit": "em", "size": 1.7} } }
+          ]
+        },
+        {
+          "id": "s007r",
+          "elType": "container",
+          "settings": { "_element_width": "initial", "_element_custom_width": {"unit": "%", "size": 35}, "flex_direction": "column", "flex_align_items": "flex-end", "gap": {"unit": "px", "row": "12", "column": "12", "isLinked": true} },
+          "elements": [
+            { "id": "w025", "elType": "widget", "widgetType": "button", "settings": { "text": "Zaka&#382;ite poziv", "link": {"url": "#kontakt"}, "size": "lg", "align": "right", "button_background_color": "#FFFFFF", "button_text_color": "#2563EB", "button_hover_background_color": "#F1F5F9", "border_radius": {"unit": "px", "top": "10", "right": "10", "bottom": "10", "left": "10", "isLinked": true}, "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 16}, "typography_font_weight": "700" } },
+            { "id": "w026", "elType": "widget", "widgetType": "heading", "settings": { "title": "office@combo.rs", "header_size": "p", "align": "right", "title_color": "rgba(255,255,255,0.75)", "typography_typography": "custom", "typography_font_family": "Inter", "typography_font_size": {"unit": "px", "size": 14} } }
           ]
         }
       ]
