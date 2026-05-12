@@ -1,0 +1,18 @@
+{
+    "mcpServers": {
+        "elementor-mcp": {
+            "type": "stdio",
+            "command": "node",
+            "args": [
+                "C:\\Users\\Nemanja Cicmil\\Local Sites\\combo-it\\app\\public\\wp-content\\plugins\\elementor-mcp-main\\bin\\mcp-proxy.mjs"
+            ],
+            "env": {
+                "WP_URL": "http://combo-it.local",
+                "WP_USERNAME": "pera",
+                "WP_APP_PASSWORD": "jEgs m133 b4Xz M0iH Djf5 vzke",
+                "MCP_PROTOCOL_VERSION": "2024-11-05",
+                "MCP_LOG_FILE": "C:\\tmp\\elementor-mcp-debug.log"
+            }
+        }
+    }
+}
