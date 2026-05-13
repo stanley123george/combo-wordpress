@@ -8,39 +8,228 @@ Version: 1.0.0
 */
 
 /* =============================================
-   GLOBALNI STILOVI
+   CSS VARIJABLE
    ============================================= */
 
 :root {
-  --combo-blue: #2563EB;
-  --combo-blue-dark: #1D4ED8;
-  --combo-dark: #0F172A;
-  --combo-dark-secondary: #1E293B;
-  --combo-text: #334155;
-  --combo-text-light: #64748B;
-  --combo-border: #E2E8F0;
-  --combo-white: #FFFFFF;
-  --combo-green: #10B981;
-  --combo-font: 'Inter', sans-serif;
-}
-
-body {
-  font-family: var(--combo-font);
-  color: var(--combo-text);
+  --combo-blue:        #2563EB;
+  --combo-blue-dark:   #1D4ED8;
+  --combo-dark:        #0F172A;
+  --combo-dark-2:      #1E293B;
+  --combo-text:        #475569;
+  --combo-text-light:  #64748B;
+  --combo-border:      #E2E8F0;
+  --combo-white:       #FFFFFF;
+  --combo-font:        'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* =============================================
-   COMBO IT — ICON-BOX PORAVNANJE
+   GLOBALNI FONT I BOJE
    ============================================= */
 
-/* Icon-box levo poravnanje (usluge i partneri) */
-#combo-services-grid .elementor-icon-box-wrapper,
-#combo-partners-grid .elementor-icon-box-wrapper {
-  text-align: left !important;
-  align-items: flex-start !important;
+body,
+h1, h2, h3, h4, h5, h6,
+p, a, span, button, input, textarea, select {
+  font-family: var(--combo-font);
 }
-#combo-services-grid .elementor-icon-box-icon,
-#combo-partners-grid .elementor-icon-box-icon {
-  justify-content: flex-start !important;
-  margin: 0 0 14px 0 !important;
+
+/* =============================================
+   HEADINZI — LETTER SPACING
+   ============================================= */
+
+.elementor-widget-heading .elementor-heading-title {
+  letter-spacing: -0.02em;
+}
+
+/* =============================================
+   SLIDE COUNTER  (JS ga kreira, CSS ga stilizuje)
+   ============================================= */
+
+#combo-slide-counter {
+  position:       absolute;
+  bottom:         14px;
+  right:          max(16px, calc((100% - 1140px) / 2 + 50px));
+  color:          rgba(255, 255, 255, 0.55);
+  font-size:      13px;
+  font-family:    var(--combo-font);
+  font-weight:    500;
+  letter-spacing: 1px;
+  z-index:        20;
+  pointer-events: none;
+  line-height:    1;
+}
+
+#combo-slide-counter .csc-sep {
+  margin:  0 4px;
+  opacity: 0.4;
+}
+
+/* =============================================
+   SERVISNE KARTICE — HOVER
+   ============================================= */
+
+.elementor-element-e3a3a8e,
+.elementor-element-3f7864a,
+.elementor-element-19b99f7,
+.elementor-element-a7804f9,
+.elementor-element-cfbc41d,
+.elementor-element-67d22c3,
+.elementor-element-446b60a {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.elementor-element-e3a3a8e:hover,
+.elementor-element-3f7864a:hover,
+.elementor-element-19b99f7:hover,
+.elementor-element-a7804f9:hover,
+.elementor-element-cfbc41d:hover,
+.elementor-element-67d22c3:hover,
+.elementor-element-446b60a:hover {
+  box-shadow:    0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  transform:     translateY(-2px);
+  border-color:  #CBD5E1 !important;
+}
+
+/* =============================================
+   TABS — AKTIVNA BOJA I FONT
+   ============================================= */
+
+.elementor-widget-tabs .elementor-tab-title {
+  font-weight: 600 !important;
+  font-size:   15px !important;
+}
+
+.elementor-widget-tabs .elementor-tab-title.elementor-active {
+  color:              var(--combo-blue) !important;
+  border-bottom-color: var(--combo-blue) !important;
+}
+
+/* =============================================
+   RESPONSIVE — TABLET  (max 1024px)
+   ============================================= */
+
+@media (max-width: 1024px) {
+
+  /* Sekcije — horizontalni padding */
+  .elementor-element-2e83b33,
+  .elementor-element-962c501,
+  .elementor-element-c9c148d,
+  .elementor-element-d84cce0,
+  .elementor-element-cf5d36b,
+  .elementor-element-4850389 {
+    padding-left:  32px !important;
+    padding-right: 32px !important;
+  }
+
+  /* Hero slides — padding */
+  .elementor-element-d5deb9e .elementor-slide-description > div {
+    padding: 40px 32px !important;
+    gap:     32px !important;
+  }
+
+  /* Tabs grid — 2 kolone */
+  .elementor-element-2853068 .elementor-tab-content
+  div[style*="grid-template-columns:1fr 1fr 1fr"] {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE  (max 767px)
+   ============================================= */
+
+@media (max-width: 767px) {
+
+  /* Sekcije — padding */
+  .elementor-element-2e83b33,
+  .elementor-element-962c501,
+  .elementor-element-c9c148d,
+  .elementor-element-d84cce0,
+  .elementor-element-cf5d36b,
+  .elementor-element-4850389 {
+    padding: 48px 16px !important;
+  }
+
+  /* Hero — stack na mobilnom */
+  .elementor-element-d5deb9e .elementor-slide-description > div {
+    flex-direction: column !important;
+    padding:        40px 20px 60px !important;
+    gap:            28px !important;
+  }
+
+  .elementor-element-d5deb9e .elementor-slide-description > div > div:last-child {
+    min-width:             100% !important;
+    width:                 100% !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .elementor-element-d5deb9e .elementor-slide-description h1 {
+    font-size:   28px !important;
+    line-height: 1.2 !important;
+  }
+
+  .elementor-element-d5deb9e .elementor-slide-description p {
+    font-size: 15px !important;
+  }
+
+  .elementor-element-d5deb9e .elementor-slide-description a[href] {
+    font-size: 14px !important;
+    padding:   12px 18px !important;
+  }
+
+  /* Section headinzi */
+  .elementor-element-f34e7bf .elementor-heading-title,
+  .elementor-element-6618476 .elementor-heading-title,
+  .elementor-element-5727e5b .elementor-heading-title,
+  .elementor-element-8767562 .elementor-heading-title,
+  .elementor-element-8b3f07f .elementor-heading-title {
+    font-size:   26px !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Tabs — 1 kolona */
+  .elementor-element-2853068 .elementor-tab-content > div[style*="display:flex"] {
+    flex-direction: column !important;
+    padding:        20px 16px !important;
+    gap:            20px !important;
+  }
+
+  .elementor-element-2853068 .elementor-tab-content
+  div[style*="grid-template-columns:1fr 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  .elementor-element-2853068 .elementor-tab-content div[style*="min-width:160px"] {
+    min-width:      100% !important;
+    flex-direction: row !important;
+    flex-wrap:      wrap !important;
+  }
+
+  .elementor-element-2853068 .elementor-tab-content
+  div[style*="justify-content:space-between"] {
+    flex-direction: column !important;
+    align-items:    flex-start !important;
+  }
+
+  /* Projekti — row u kolonu */
+  .elementor-element-fc27420 {
+    flex-direction: column !important;
+  }
+
+  /* ISO — row u kolonu */
+  .elementor-element-92723c5 {
+    flex-direction: column !important;
+    gap:            32px !important;
+  }
+
+  /* CTA — row u kolonu */
+  .elementor-element-c8dbcb0 {
+    flex-direction: column !important;
+    gap:            24px !important;
+  }
+
+  .elementor-element-8b41d2b {
+    flex-direction: row !important;
+    flex-wrap:      wrap !important;
+  }
 }
