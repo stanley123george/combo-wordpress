@@ -83,7 +83,8 @@ p, a, span, button, input, textarea, select {
 #combo-slide-counter {
   position:       absolute;
   bottom:         14px;
-  right:          max(16px, calc((100% - 1140px) / 2 + 50px));
+  /* levo — poravnano sa buletićima + razmak za buliće (~60px) */
+  left:           max(16px, calc((100% - 1140px) / 2 + 90px));
   color:          rgba(255, 255, 255, 0.55);
   font-size:      13px;
   font-family:    var(--combo-font);

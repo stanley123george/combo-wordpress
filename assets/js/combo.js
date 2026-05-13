@@ -26,6 +26,11 @@
 
     widgetEl.style.position = 'relative';
 
+    // slides.length uključuje Swiper loop klonove — uzimamo samo prave slideove
+    var realTotal = [].filter.call(swiper.slides, function (s) {
+      return !s.classList.contains('swiper-slide-duplicate');
+    }).length;
+
     var counter = document.createElement('div');
     counter.id  = 'combo-slide-counter';
     counter.setAttribute('aria-hidden', 'true');
@@ -33,7 +38,7 @@
     counter.innerHTML =
       '<span id="csc-cur">1</span>' +
       '<span class="csc-sep">/</span>' +
-      '<span id="csc-tot">' + swiper.slides.length + '</span>';
+      '<span id="csc-tot">' + realTotal + '</span>';
 
     widgetEl.appendChild(counter);
 
