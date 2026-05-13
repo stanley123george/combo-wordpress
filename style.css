@@ -42,6 +42,41 @@ p, a, span, button, input, textarea, select {
 }
 
 /* =============================================
+   HERO SLIDER — PAGINATION BULIĆI
+   ============================================= */
+
+/* Kontejner buletića — poravnan sa boxed contentom */
+.elementor-element-d5deb9e .swiper-pagination {
+  left:         0 !important;
+  right:        0 !important;
+  width:        100% !important;
+  max-width:    1140px !important;
+  margin:       0 auto !important;
+  padding-left: 20px !important;
+  padding-bottom: 14px !important;
+  box-sizing:   border-box !important;
+  text-align:   left !important;
+}
+
+/* Neaktivan bulet */
+.elementor-element-d5deb9e .swiper-pagination-bullet {
+  width:        7px;
+  height:       7px;
+  border-radius: 50%;
+  background:   rgba(255, 255, 255, 0.3);
+  opacity:      1;
+  transition:   all 0.25s;
+  margin:       0 4px;
+}
+
+/* Aktivan bulet — bar */
+.elementor-element-d5deb9e .swiper-pagination-bullet-active {
+  width:        22px;
+  border-radius: 4px;
+  background:   #378ADD;
+}
+
+/* =============================================
    SLIDE COUNTER  (JS ga kreira, CSS ga stilizuje)
    ============================================= */
 
