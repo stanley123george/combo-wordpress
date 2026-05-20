@@ -291,6 +291,14 @@ function combo_child_enqueue() {
 		null
 	);
 
+	// Font Awesome (Elementor bundle) — za FA ikonice u tab sadržaju
+	wp_enqueue_style(
+		'combo-font-awesome',
+		plugins_url( 'elementor/assets/lib/font-awesome/css/all.min.css' ),
+		[],
+		'6.5.1'
+	);
+
 	// Combo JS (slider counter, itd.)
 	wp_enqueue_script(
 		'combo-scripts',
