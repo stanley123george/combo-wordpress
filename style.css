@@ -29,7 +29,8 @@ Version: 1.0.0
 
 body,
 h1, h2, h3, h4, h5, h6,
-p, a, span, button, input, textarea, select {
+p, a, span, div, button, input, textarea, select,
+.elementor-widget-container {
   font-family: var(--combo-font);
 }
 
@@ -140,6 +141,266 @@ p, a, span, button, input, textarea, select {
 }
 
 /* =============================================
+   BRAND CARDS — PARTNERI I PROIZVOĐAČI
+   ============================================= */
+
+.brand-header {
+  padding:         14px 18px;
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  border-bottom:   1px solid #eaeae8;
+}
+
+.brand-logo {
+  font-size:   14px;
+  font-weight: 600;
+  display:     flex;
+  align-items: center;
+  gap:         8px;
+  line-height: 1;
+}
+
+.brand-logo span {
+  font-size:   14px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+.brand-badge {
+  font-size:     12px;
+  font-weight:   600;
+  padding:       3px 8px;
+  border-radius: 10px;
+  white-space:   nowrap;
+}
+
+.brand-products {
+  padding:     14px 18px;
+  display:     flex;
+  flex-wrap:   wrap;
+  gap:         7px;
+  background:  #fff;
+}
+
+.brand-product {
+  font-size:     12px;
+  padding:       4px 10px;
+  border:        1px solid #eaeae8;
+  border-radius: 6px;
+  color:         #555;
+  background:    #f7f7f5;
+  display:       inline-block;
+}
+
+/* =============================================
+   IZ PRAKSE — 3 slajdera
+   =============================================
+   NAPOMENA: Elementor generiše native CSS (boje, font-size, borderi) inline
+   u <style id="loop-244/254/249"> tagovima. style.css popravlja samo što
+   native CSS ne može: badge pill i avatar krug (renduju se bez unutrašnjih
+   divova pa selektori u Elementor custom CSS ne matchuju ništa).
+   ============================================= */
+
+/* ── Jednake visine ── */
+.elementor-element-10ae396.e-con {
+  align-items: stretch !important;
+}
+.elementor-element-10ae396 > .elementor-widget-loop-carousel {
+  height: auto !important;
+}
+
+/* ── Swiper: Elementor smanjuje na calc(100% - 60px) za outside strelice — vrati na 100% ── */
+.elementor-element-652b08a .swiper,
+.elementor-element-297c149 .swiper,
+.elementor-element-f8a648b .swiper {
+  width: 100% !important;
+}
+
+/* ── Card: bottom padding da footer ne bude ispod nav bara (22px + 46px nav) ── */
+.elementor-element-652b08a .e-loop-item > .e-con,
+.elementor-element-297c149 .e-loop-item > .e-con,
+.elementor-element-f8a648b .e-loop-item > .e-con {
+  --padding-bottom: 68px !important;
+}
+
+/* ── BADGE PILL — Case Study
+   Boja dolazi iz functions.php (per-post CSS).
+   Ovde samo strukturalni stilovi. ── */
+.elementor-element-8b7426a {
+  align-self: flex-start !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+  padding: 3px 10px !important;
+  border-radius: 20px !important;
+  line-height: 1.5 !important;
+}
+
+/* ── BADGE PILL — Blog (narandžasta) — isti DOM pattern ── */
+.elementor-element-37785f1 {
+  align-self: flex-start !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.06em !important;
+  text-transform: uppercase !important;
+  color: #F59E0B !important;
+  border: 1px solid rgba(245,158,11,0.45) !important;
+  background: rgba(245,158,11,0.12) !important;
+  padding: 3px 10px !important;
+  border-radius: 20px !important;
+  line-height: 1.5 !important;
+}
+
+/* ── AVATAR krug — Testimonial
+   Rendered HTML: <div class="elementor-element-3afb846">MP</div>
+   .elementor-widget-container ne postoji — ciljamo element direktno ── */
+.elementor-element-3afb846 {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
+  border-radius: 50% !important;
+  background: #1E40AF !important;
+  flex-shrink: 0 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  line-height: 1 !important;
+}
+
+/* ── TESTIMONIAL CITAT — boja (nema Elementor native CSS za e4d581d) ── */
+.elementor-element-e4d581d {
+  color: rgba(255,255,255,0.85) !important;
+  font-style: italic !important;
+}
+
+/* ── NAV BAR: pagination strip ── */
+.elementor-element-652b08a .swiper-pagination,
+.elementor-element-297c149 .swiper-pagination,
+.elementor-element-f8a648b .swiper-pagination {
+  position: absolute !important;
+  top: auto !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 46px !important;
+  padding: 0 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 5px !important;
+  border-top: 1px solid rgba(255,255,255,0.08) !important;
+  background: rgba(255,255,255,0.03) !important;
+  transform: none !important;
+  text-align: left !important;
+  box-sizing: border-box !important;
+  pointer-events: none !important;
+}
+
+/* ── NAV BAR: neaktivan dot ── */
+.elementor-element-652b08a .swiper-pagination-bullet,
+.elementor-element-297c149 .swiper-pagination-bullet,
+.elementor-element-f8a648b .swiper-pagination-bullet {
+  background: rgba(255,255,255,0.18) !important;
+  opacity: 1 !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+/* ── NAV BAR: aktivan dot ── */
+.elementor-element-652b08a .swiper-pagination-bullet-active,
+.elementor-element-297c149 .swiper-pagination-bullet-active,
+.elementor-element-f8a648b .swiper-pagination-bullet-active {
+  background: #378ADD !important;
+  width: 18px !important;
+  border-radius: 3px !important;
+}
+
+/* ── NAV BAR: strelice iznad paginacije ── */
+.elementor-element-652b08a .elementor-swiper-button,
+.elementor-element-297c149 .elementor-swiper-button,
+.elementor-element-f8a648b .elementor-swiper-button {
+  z-index: 2 !important;
+}
+
+/* ── Min-visina kartica ── */
+.elementor-element-b671fab.e-con,
+.elementor-element-01d1be1.e-con,
+.elementor-element-9a417f5.e-con {
+  min-height: 220px !important;
+}
+
+/* ── Case study: sakrij excerpt (referenca nema opis, samo naslov) ── */
+.elementor-element-7ae73e3 {
+  display: none !important;
+}
+
+/* ── Case study naslov: levo, puna širina, bolovan ── */
+.elementor-element-4bf60b0 {
+  width: 100% !important;
+  align-self: flex-start !important;
+}
+.elementor-element-4bf60b0 .elementor-heading-title {
+  text-align: left !important;
+  font-weight: 600 !important;
+}
+
+/* ── KPI kolone: override --row-gap (Elementor koristi var(--row-gap) var(--column-gap)) ── */
+.elementor-element-53d40ac.e-con,
+.elementor-element-9306541.e-con,
+.elementor-element-1aea7ef.e-con {
+  --row-gap: 2px !important;
+  --widgets-spacing-row: 2px !important;
+}
+
+/* ── Testimonial ime/pozicija: override --row-gap ── */
+.elementor-element-732171b.e-con {
+  --row-gap: 2px !important;
+  --widgets-spacing-row: 2px !important;
+}
+
+/* ── KPI brojevi — smanji font (Elementor ima 20px) ── */
+.elementor-element-f67cf47,
+.elementor-element-7b5acd9,
+.elementor-element-d4de6f9 {
+  font-size: 17px !important;
+}
+
+/* ── Blog badge link boja (<a> tag nasledjuje temu) ── */
+.elementor-element-37785f1 a {
+  color: #F59E0B !important;
+  text-decoration: none !important;
+}
+
+/* ── Counter "X / Y" — injectuje combo.js ── */
+.elementor-element-652b08a .combo-loop-counter,
+.elementor-element-297c149 .combo-loop-counter,
+.elementor-element-f8a648b .combo-loop-counter {
+  position: absolute !important;
+  bottom: 0 !important;
+  right: 90px !important;
+  height: 46px !important;
+  display: flex !important;
+  align-items: center !important;
+  color: rgba(255,255,255,0.28) !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.3px !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+
+/* =============================================
    RESPONSIVE — TABLET  (max 1024px)
    ============================================= */
 
@@ -246,8 +507,8 @@ p, a, span, button, input, textarea, select {
     align-items:    flex-start !important;
   }
 
-  /* Projekti — row u kolonu */
-  .elementor-element-fc27420 {
+  /* 3 slajdera — stack na mobilnom */
+  .elementor-element-10ae396 {
     flex-direction: column !important;
   }
 
