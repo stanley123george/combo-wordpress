@@ -512,10 +512,16 @@ p, a, span, div, button, input, textarea, select,
     flex-direction: column !important;
   }
 
-  /* ISO — row u kolonu */
-  .elementor-element-92723c5 {
+  /* ISO — row u kolonu na mobilnom */
+  .elementor-element-92723c5.e-con {
     flex-direction: column !important;
     gap:            32px !important;
+  }
+  .elementor-element-1b24656,
+  .elementor-element-0b7cff2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 1 1 100% !important;
   }
 
   /* CTA — row u kolonu */
@@ -528,4 +534,334 @@ p, a, span, div, button, input, textarea, select,
     flex-direction: row !important;
     flex-wrap:      wrap !important;
   }
+}
+
+/* =============================================
+   ISO 27001 SEKCIJA — layout & boje
+   ============================================= */
+
+/* Row: leva raste (1fr), desna auto — kao referenca grid 1fr auto */
+.elementor-element-92723c5.e-con {
+  gap: 40px !important;
+  align-items: center !important;
+  flex-wrap: nowrap !important;
+}
+
+/* Leva kolona: raste da popuni prostor */
+.elementor-element-1b24656 {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  flex: 1 1 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  gap: 16px !important;
+}
+
+/* Desna kolona (kartica): auto širina — shrinks to content */
+.elementor-element-0b7cff2 {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 180px !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06) !important;
+}
+
+/* CTA dugme — zauzima auto-širinu (ne stretch) */
+.elementor-element-c266732 {
+  align-self: flex-start !important;
+}
+
+/* Badge red — puna širina leve kolone, flex-wrap */
+.elementor-element-84079b0,
+.elementor-element-84079b0.e-con,
+.elementor-element-84079b0 > .e-con-inner {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap !important;
+  width: 100% !important;
+  gap: 8px !important;
+}
+
+/* Svaki badge container — auto širina */
+.elementor-element-19af160,
+.elementor-element-c3ab626,
+.elementor-element-1501216,
+.elementor-element-ff53e98 {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+/* Check badge dugmici — referenca: #e1f5ee bg, #bbf7d0 border, 7px radius */
+.elementor-element-a1fc182 .elementor-button,
+.elementor-element-65f351a .elementor-button,
+.elementor-element-21c3c44 .elementor-button,
+.elementor-element-12c1795 .elementor-button {
+  color: #085041 !important;
+  background-color: #e1f5ee !important;
+  border: 1px solid #bbf7d0 !important;
+  border-radius: 7px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  padding: 9px 16px !important;
+  white-space: nowrap !important;
+}
+
+/* "Sertifikacija u toku" — zelena pozadina kao na referenci */
+.elementor-element-e117092 .elementor-button {
+  color: #085041 !important;
+  background-color: #e1f5ee !important;
+  border: 1px solid #bbf7d0 !important;
+  border-radius: 20px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 4px 12px !important;
+}
+
+/* 27001 heading — centrirano */
+.elementor-element-8037b7d .elementor-heading-title {
+  text-align: center !important;
+}
+
+/* =============================================
+   CTA SEKCIJA
+   ============================================= */
+
+/* "Zakažite poziv" — bijelo dugme, tamni tekst */
+.elementor-element-bfede37 .elementor-button {
+  background-color: #ffffff !important;
+  color: #0d1a2e !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 13px 28px !important;
+}
+
+/* "office@combo.rs" — outline, poluprovidni border */
+.elementor-element-870133d .elementor-button {
+  background-color: transparent !important;
+  color: rgba(255,255,255,0.75) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  padding: 13px 28px !important;
+}
+
+/* Dugmad u redu jedan pored drugog */
+.elementor-element-8b41d2b {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  gap: 12px !important;
+  flex-shrink: 0 !important;
+}
+
+/* =============================================
+   HEADER — combo-nav
+   ============================================= */
+
+/* Hello Elementor uklanja default header */
+.site-header { display: none !important; }
+
+/* Sticky wrapper koji Elementor kreira za header template */
+.e-con.e-sticky,
+.elementor-sticky--active {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 100 !important;
+}
+
+/* Nav inner layout */
+.combo-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 68px;
+}
+
+/* Logo */
+.combo-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
+}
+.combo-logo-box {
+  width: 32px;
+  height: 32px;
+  background: #1a5fd4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.combo-logo-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.3px;
+}
+.combo-logo-text span {
+  color: #1a5fd4;
+}
+
+/* Nav linkovi */
+.combo-nav-menu {
+  display: flex;
+  gap: 36px;
+}
+.combo-nav-menu a {
+  font-size: 16px;
+  color: #666;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.combo-nav-menu a:hover {
+  color: #1a1a1a;
+}
+
+/* Desna strana — dugmad */
+.combo-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.combo-nav-btn {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.combo-nav-btn--outline {
+  background: rgba(26,95,212,0.12);
+  color: #1a5fd4;
+  border: 1px solid rgba(26,95,212,0.25);
+}
+.combo-nav-btn--outline:hover {
+  background: rgba(26,95,212,0.2);
+}
+.combo-nav-btn--solid {
+  background: #1a5fd4;
+  color: #fff;
+  border: none;
+}
+.combo-nav-btn--solid:hover {
+  background: #1550b8;
+  color: #fff;
+}
+
+/* Header kontejner — ukloni Elementor padding-e koji remete visinu */
+.elementor-427 .e-con {
+  min-height: 68px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.elementor-427 .elementor-widget-html {
+  width: 100%;
+}
+
+/* =============================================
+   FOOTER — combo-footer
+   ============================================= */
+
+.combo-footer-top {
+  display: grid;
+  grid-template-columns: 220px 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+
+/* Logo u footeru */
+.combo-ft-brand .combo-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.combo-ft-desc {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.combo-ft-contact {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 10px;
+  line-height: 1.9;
+}
+.combo-ft-contact a {
+  color: #1a5fd4;
+  text-decoration: none;
+}
+
+/* Kolone sa linkovima */
+.combo-ft-col h4 {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+  margin-top: 0;
+  color: #1a1a1a;
+}
+.combo-ft-col a {
+  display: block;
+  font-size: 14px;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.15s;
+}
+.combo-ft-col a:hover {
+  color: #1a1a1a;
+}
+
+/* Footer bottom bar */
+.combo-footer-bottom {
+  border-top: 1px solid #eaeae8;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.combo-ft-copy {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Cert badges */
+.combo-ft-certs {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+}
+.combo-ft-cert {
+  font-size: 12px;
+  padding: 3px 9px;
+  border: 1px solid #eaeae8;
+  border-radius: 5px;
+  color: #bbb;
+}
+.combo-ft-cert--green {
+  color: #085041;
+  background: #e1f5ee;
+  border-color: #bbf7d0;
+}
+
+/* Footer HTML widget — puna širina */
+.elementor-429 .elementor-widget-html {
+  width: 100%;
 }

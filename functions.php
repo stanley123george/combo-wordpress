@@ -263,6 +263,116 @@ function combo_register_acf_fields() {
 }
 
 /* =============================================
+   CUSTOM HEADER — injektuje se odmah posle <body>
+   ============================================= */
+
+add_action( 'wp_body_open', 'combo_render_header', 5 );
+function combo_render_header() {
+	?>
+	<header id="combo-header" role="banner">
+	  <div class="combo-nav-inner">
+	    <a class="combo-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+	      <div class="combo-logo-box">
+	        <svg viewBox="0 0 20 20" fill="none" width="20" height="20">
+	          <rect x="2" y="2" width="7" height="7" rx="2" fill="white"/>
+	          <rect x="11" y="2" width="7" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+	          <rect x="2" y="11" width="7" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+	          <rect x="11" y="11" width="7" height="7" rx="2" fill="white"/>
+	        </svg>
+	      </div>
+	      <span class="combo-logo-text">Combo<span>.</span></span>
+	    </a>
+	    <nav class="combo-nav-menu" aria-label="Glavna navigacija">
+	      <a href="<?php echo esc_url( home_url( '/#usluge' ) ); ?>">Usluge</a>
+	      <a href="#">O nama</a>
+	      <a href="<?php echo esc_url( home_url( '/?post_type=case-study' ) ); ?>">Case studies</a>
+	      <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a>
+	      <a href="#">Kontakt</a>
+	      <a href="#">Klijenti</a>
+	    </nav>
+	    <div class="combo-nav-right">
+	      <a href="#" class="combo-nav-btn combo-nav-btn--outline">Prijavite problem</a>
+	      <a href="#" class="combo-nav-btn combo-nav-btn--solid">Zakažite poziv</a>
+	    </div>
+	  </div>
+	</header>
+	<?php
+}
+
+/* =============================================
+   CUSTOM FOOTER
+   ============================================= */
+
+add_action( 'wp_footer', 'combo_render_footer', 5 );
+function combo_render_footer() {
+	?>
+	<footer id="combo-footer" role="contentinfo">
+	  <div class="combo-footer-top">
+	    <div class="combo-ft-brand">
+	      <a class="combo-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+	        <div class="combo-logo-box" style="width:28px;height:28px">
+	          <svg viewBox="0 0 20 20" fill="none" width="16" height="16">
+	            <rect x="2" y="2" width="7" height="7" rx="2" fill="white"/>
+	            <rect x="11" y="2" width="7" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+	            <rect x="2" y="11" width="7" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+	            <rect x="11" y="11" width="7" height="7" rx="2" fill="white"/>
+	          </svg>
+	        </div>
+	        <span class="combo-logo-text" style="font-size:15px">Combo<span>.</span></span>
+	      </a>
+	      <p class="combo-ft-desc">IT usluge za mala, srednja i velika preduzeća u Srbiji od 2016. godine.</p>
+	      <div class="combo-ft-contact">
+	        <a href="mailto:office@combo.rs">office@combo.rs</a><br>
+	        <a href="mailto:support@combo.rs">support@combo.rs</a><br>
+	        +381 11 420 9242<br>
+	        +381 63 681 403<br>
+	        Beograd, Srbija
+	      </div>
+	    </div>
+	    <div class="combo-ft-col">
+	      <h4>Usluge</h4>
+	      <a href="#">IT administracija</a>
+	      <a href="#">Cloud rešenja</a>
+	      <a href="#">Mreže</a>
+	      <a href="#">Licenciranje</a>
+	      <a href="#">IT consulting</a>
+	      <a href="#">Web izrada</a>
+	    </div>
+	    <div class="combo-ft-col">
+	      <h4>Kompanija</h4>
+	      <a href="#">O nama</a>
+	      <a href="#">Tim</a>
+	      <a href="<?php echo esc_url( home_url( '/?post_type=case-study' ) ); ?>">Case studies</a>
+	      <a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a>
+	      <a href="#">Kontakt</a>
+	    </div>
+	    <div class="combo-ft-col">
+	      <h4>Microsoft</h4>
+	      <a href="#">Microsoft 365</a>
+	      <a href="#">Azure</a>
+	      <a href="#">Teams</a>
+	      <a href="#">Intune / MDM</a>
+	      <a href="#">SharePoint</a>
+	    </div>
+	  </div>
+	  <div class="combo-footer-bottom">
+	    <span class="combo-ft-copy">© <?php echo date( 'Y' ); ?> Combo IT · PIB: 112211110 · MB: 21627917</span>
+	    <div class="combo-ft-certs">
+	      <span class="combo-ft-cert combo-ft-cert--green">ISO 27001</span>
+	      <span class="combo-ft-cert">MS Partner</span>
+	      <span class="combo-ft-cert">Sophos</span>
+	      <span class="combo-ft-cert">Panda</span>
+	      <span class="combo-ft-cert">MikroTik MTCRE</span>
+	      <span class="combo-ft-cert">Cisco SMB</span>
+	      <span class="combo-ft-cert">HP · Dell · Lenovo</span>
+	      <span class="combo-ft-cert">Ubiquiti</span>
+	    </div>
+	  </div>
+	</footer>
+	<?php
+}
+
+/* =============================================
    ENQUEUE SCRIPTS & STYLES
    ============================================= */
 
