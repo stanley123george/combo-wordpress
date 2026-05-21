@@ -307,6 +307,7 @@ add_action( 'wp_footer', 'combo_render_footer', 5 );
 function combo_render_footer() {
 	?>
 	<footer id="combo-footer" role="contentinfo">
+	  <div class="combo-footer-inner">
 	  <div class="combo-footer-top">
 	    <div class="combo-ft-brand">
 	      <a class="combo-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -368,6 +369,7 @@ function combo_render_footer() {
 	      <span class="combo-ft-cert">Ubiquiti</span>
 	    </div>
 	  </div>
+	  </div><!-- /.combo-footer-inner -->
 	</footer>
 	<?php
 }

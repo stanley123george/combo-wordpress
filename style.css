@@ -667,20 +667,23 @@ p, a, span, div, button, input, textarea, select,
 /* Hello Elementor uklanja default header */
 .site-header { display: none !important; }
 
-/* Sticky wrapper koji Elementor kreira za header template */
-.e-con.e-sticky,
-.elementor-sticky--active {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 100 !important;
+/* Header outer — full-width traka, sticky */
+#combo-header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background: #ffffff;
+  border-bottom: 1px solid #e8e8e5;
 }
 
-/* Nav inner layout */
+/* Nav inner — boxed 1140px */
 .combo-nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 32px;
   height: 68px;
 }
 
@@ -758,19 +761,22 @@ p, a, span, div, button, input, textarea, select,
   color: #fff;
 }
 
-/* Header kontejner — ukloni Elementor padding-e koji remete visinu */
-.elementor-427 .e-con {
-  min-height: 68px;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-.elementor-427 .elementor-widget-html {
-  width: 100%;
-}
-
 /* =============================================
    FOOTER — combo-footer
    ============================================= */
+
+/* Footer outer — full-width tamna traka */
+#combo-footer {
+  background: #0F172A;
+  padding: 60px 0 32px;
+}
+
+/* Footer inner — boxed 1140px */
+.combo-footer-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
 
 .combo-footer-top {
   display: grid;
@@ -813,7 +819,7 @@ p, a, span, div, button, input, textarea, select,
   letter-spacing: 0.5px;
   margin-bottom: 14px;
   margin-top: 0;
-  color: #1a1a1a;
+  color: #ffffff;
 }
 .combo-ft-col a {
   display: block;
